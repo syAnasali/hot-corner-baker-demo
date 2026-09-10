@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hot Corner Bakery &amp; Café — Gumanpura, Kota</title><link rel="icon" type="image/png" href="logo.png"/><link rel="apple-touch-icon" href="logo.png"/><link rel="preload" as="image" href="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Jv3VsaJJY0y0WE4NY-4X79YxfYvv1kpqD-GGFfCUlSxpVje0x2vEx6pvykLWPemnopNkSK1Pyi7GovDKAFtpeqvsY1EfB53uUh-rvrn3Z9bAhIpLoHRGxoqmaGefik2IStpYfGu11ucwdWpipkwegYcEiu_nNwSg8G_jvFl3vbGJLsghUFFw4Urclkc0-4BtlSqV0HgP5KThbHsuEHwLA0mZ8pHray2L8zwh3rvgBULCSXERSEYX"/><link rel="preload" as="image" href="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/><link rel="preload" as="image" href="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/><link rel="preload" as="image" href="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&amp;family=Italiana&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css"/><script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script><style>@layer base{html.lenis,html.lenis body{height:auto;}.lenis.lenis-smooth{scroll-behavior:auto!important;}html,body{margin:0;padding:0;overflow-x:hidden;max-width:100vw;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.nav-link {
+  color: #675c58;
+  transition: color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover,
+.nav-link.active-nav-link {
+  color: #ffffff !important;
+}
+
+/* Floating Animations for Hero */
+@keyframes heroFloatCenter {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-13px) rotate(0.35deg);
+  }
+}
+
+@keyframes heroGlowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.22;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.4;
+  }
+}
+
+@keyframes heroFloatRightTop {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(-0.6deg);
+  }
+}
+
+@keyframes heroFloatRightBottom {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes heroFloatScript {
+  0%, 100% {
+    transform: rotate(-2deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-1.5deg) translateY(6px);
+  }
+}
+
+.hero-float-artifact {
+  animation: heroFloatCenter 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.hero-glow-pulse {
+  animation: heroGlowPulse 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform, opacity;
+}
+
+.hero-float-right-top {
+  display: inline-block;
+  animation: heroFloatRightTop 5.2s ease-in-out infinite 0.7s;
+  will-change: transform;
+}
+
+.hero-float-right-bottom {
+  animation: heroFloatRightBottom 5.8s ease-in-out infinite 1.4s;
+  will-change: transform;
+}
+
+.hero-float-center-script {
+  display: inline-block;
+  animation: heroFloatScript 6.4s ease-in-out infinite 0.3s;
+  will-change: transform;
+}
+
+/* Hero Center Multi-Image Slider Transitions */
+.hero-slide-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.75s cubic-bezier(0.25, 1, 0.5, 1), transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+.hero-slide-img.slide-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  z-index: 2;
+}
+.hero-slide-img.slide-inactive {
+  opacity: 0 !important;
+  transform: scale(1.06) !important;
+  z-index: 1;
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-container":"#6d625e","inverse-primary":"#ffb5a0","surface-container":"#f1ede6","on-error":"#ffffff","error":"#ba1a1a","primary-fixed":"#ffdbd1","primary-fixed-dim":"#ffb5a0","primary-container":"#c54f2c","surface-bright":"#fdf9f2","outline-variant":"#dfc0b7","on-primary-fixed-variant":"#862201","surface-container-low":"#f7f3ec","secondary-fixed-dim":"#d2c4be","on-background":"#1c1c18","tertiary":"#8a4950","on-tertiary":"#ffffff","tertiary-fixed-dim":"#ffb2b9","surface-container-highest":"#e6e2db","tertiary-fixed":"#ffdadc","surface-tint":"#a73918","surface":"#fdf9f2","secondary-container":"#eedfda","inverse-surface":"#31302c","surface-variant":"#e6e2db","on-secondary":"#ffffff","on-secondary-fixed":"#211a17","on-primary-fixed":"#3b0900","tertiary-container":"#a76068","on-tertiary-fixed-variant":"#70343c","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#3a0913","outline":"#8b716a","background":"#fdf9f2","on-primary":"#ffffff","on-surface":"#1c1c18","inverse-on-surface":"#f4f0e9","surface-container-high":"#ebe8e1","primary":"#a43716","on-primary-container":"#fffbff","secondary":"#675c58","on-error-container":"#93000a","on-tertiary-container":"#fffbff","secondary-fixed":"#eedfda","on-surface-variant":"#58423c","surface-dim":"#dddad3","error-container":"#ffdad6","on-secondary-fixed-variant":"#4e4541"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"xl":"2rem","2xl":"3rem","gutter":"1.5rem","md":"1rem","xs":"0.5rem","2xs":"0.25rem","lg":"1.5rem","4xl":"6rem","3xl":"4rem","margin-desktop":"3rem","sm":"0.75rem","margin-mobile":"1.25rem"},"fontFamily":{"fraunces":["Fraunces","serif"],"syne":["Syne","sans-serif"],"italiana":["Italiana","serif"],"cormorant":["Cormorant Garamond","serif"],"headline-lg":["Playfair Display"],"title-sm":["Plus Jakarta Sans"],"display-hero-mobile":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"display-hero":["Playfair Display"],"caption":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"headline-md":["Playfair Display"],"title-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["48px",{"lineHeight":"54px","letterSpacing":"-0.02em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"600"}],"display-hero-mobile":["44px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["80px",{"lineHeight":"84px","letterSpacing":"-0.03em","fontWeight":"700"}],"caption":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.14em","fontWeight":"700"}],"headline-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] bg-transparent border-b border-transparent py-3 sm:py-4 lg:py-5 shadow-none"><div class="w-full px-3 sm:px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-2 sm:gap-4"><a class="group flex items-center gap-2 sm:gap-2.5 transition-opacity duration-300 hover:opacity-95 select-none shrink-0" data-path="hero" href="#hero"><div class="relative flex items-center justify-center h-9 w-9 sm:h-10 sm:w-10 rounded-lg bg-surface-container/80 p-1 border border-on-surface/10 shadow-sm group-hover:border-primary/40 group-hover:bg-surface-container transition-all duration-300"><img alt="Hot Corner Logo" class="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="logo.png"/><span class="absolute -top-1 -right-1 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span></div><div class="flex flex-col"><div class="flex items-center gap-1 sm:gap-1.5"><span class="font-serif font-bold text-sm sm:text-base lg:text-lg tracking-tight text-on-surface group-hover:text-primary transition-colors duration-300 leading-none">HOT CORNER</span><span class="hidden sm:inline-block font-label-caps text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded bg-surface-container text-primary font-bold leading-none">1924 DECK</span></div><span class="font-caption text-[10px] sm:text-[11px] text-on-surface-variant tracking-wider uppercase leading-tight mt-0.5">Bakery &amp; Café · Kota</span></div></a><nav id="nav-container" class="hidden md:flex relative items-center p-1 rounded-full bg-surface-container-low/80 backdrop-blur-md border border-on-surface/10 shadow-[0_2px_12px_rgba(0,0,0,0.03)] transition-all duration-300">
+          <div id="nav-active-pill" class="absolute top-1 bottom-1 rounded-full bg-on-background shadow-sm transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] opacity-0 pointer-events-none"></div>
+          <a class="nav-link relative z-10 px-3.5 py-1.5 text-xs sm:text-sm font-medium tracking-wide transition-colors duration-300 rounded-full text-on-surface-variant hover:text-white flex items-center gap-1.5" data-section="best-sellers" href="#best-sellers">
+            <span class="nav-dot w-1.5 h-1.5 rounded-full bg-primary-fixed opacity-0 transition-opacity duration-300"></span>
+            <span>Best Sellers</span>
+          </a>
+          <a class="nav-link relative z-10 px-3.5 py-1.5 text-xs sm:text-sm font-medium tracking-wide transition-colors duration-300 rounded-full text-on-surface-variant hover:text-white flex items-center gap-1.5" data-section="about" href="#about">
+            <span class="nav-dot w-1.5 h-1.5 rounded-full bg-primary-fixed opacity-0 transition-opacity duration-300"></span>
+            <span>About</span>
+          </a>
+          <a class="nav-link relative z-10 px-3.5 py-1.5 text-xs sm:text-sm font-medium tracking-wide transition-colors duration-300 rounded-full text-on-surface-variant hover:text-white flex items-center gap-1.5" data-section="menu" href="#menu">
+            <span class="nav-dot w-1.5 h-1.5 rounded-full bg-primary-fixed opacity-0 transition-opacity duration-300"></span>
+            <span>Menu</span>
+          </a>
+          <a class="nav-link relative z-10 px-3.5 py-1.5 text-xs sm:text-sm font-medium tracking-wide transition-colors duration-300 rounded-full text-on-surface-variant hover:text-white flex items-center gap-1.5" data-section="reviews" href="#reviews">
+            <span class="nav-dot w-1.5 h-1.5 rounded-full bg-primary-fixed opacity-0 transition-opacity duration-300"></span>
+            <span>Reviews</span>
+          </a>
+          <a class="nav-link relative z-10 px-3.5 py-1.5 text-xs sm:text-sm font-medium tracking-wide transition-colors duration-300 rounded-full text-on-surface-variant hover:text-white flex items-center gap-1.5" data-section="visit-us" href="#visit-us">
+            <span class="nav-dot w-1.5 h-1.5 rounded-full bg-primary-fixed opacity-0 transition-opacity duration-300"></span>
+            <span>Visit Us</span>
+          </a>
+        </nav><div class="flex items-center gap-1.5 sm:gap-3 shrink-0"><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container/70 border border-on-surface/5 font-caption text-xs text-on-surface-variant select-none"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-caps text-[10px] tracking-wider uppercase text-on-surface font-bold">245°C Hearth</span><span class="text-outline-variant">/</span><span id="live-ist-clock" class="font-mono text-[11px] text-on-surface font-medium">06:30:00 IST</span></div><button id="soundscape-toggle" aria-label="Toggle Ambient Soundscape" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container/70 hover:bg-surface-container-high transition-colors text-on-surface-variant font-caption text-xs" type="button"><div class="flex items-end gap-0.5 h-3.5 w-3.5"><span class="sound-bar w-0.5 h-2 bg-primary rounded-full transition-all duration-300"></span><span class="sound-bar w-0.5 h-3.5 bg-primary rounded-full transition-all duration-300"></span><span class="sound-bar w-0.5 h-1.5 bg-primary rounded-full transition-all duration-300"></span></div><span id="soundscape-label" class="uppercase font-label-caps text-[10px] tracking-wider">Soundscape</span></button><a class="group relative inline-flex items-center gap-1 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary text-on-primary text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-semibold overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] shrink-0" href="#visit-us"><span class="relative z-10 flex items-center gap-1"><span>Reserve</span><span class="hidden sm:inline">Table</span><span class="material-symbols-outlined text-[13px] sm:text-[15px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span></span><div class="absolute inset-0 bg-on-background opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div></a><button id="mobile-menu-btn" aria-label="Toggle Navigation" class="md:hidden relative flex flex-col justify-center items-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors focus:outline-none shrink-0" type="button"><span id="burger-line-1" class="w-3.5 h-0.5 bg-on-surface rounded transition-all duration-300 -translate-y-1"></span><span id="burger-line-2" class="w-3.5 h-0.5 bg-on-surface rounded transition-all duration-300"></span><span id="burger-line-3" class="w-3.5 h-0.5 bg-on-surface rounded transition-all duration-300 translate-y-1"></span></button></div></div></header><div id="mobile-drawer" class="fixed inset-x-0 top-16 bg-surface/95 backdrop-blur-2xl border-b border-on-surface/10 shadow-2xl p-5 transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] -translate-y-[120%] opacity-0 pointer-events-none md:hidden z-40"><div class="flex flex-col gap-3 max-w-md mx-auto"><div class="flex items-center justify-between pb-2 border-b border-on-surface/10"><div class="flex items-center gap-2"><img alt="Hot Corner Logo" class="h-7 w-auto object-contain" src="logo.png"/><span class="font-label-caps text-xs uppercase tracking-widest text-primary font-bold">Salon Directory</span></div><span class="font-caption text-xs text-on-surface-variant flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>Oven 245°C Active</span></div><nav class="flex flex-col gap-1.5"><a class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-medium text-on-surface hover:bg-surface-container transition-colors" data-section="hero" href="#hero"><div class="flex items-center gap-2"><span class="mobile-dot w-1.5 h-1.5 rounded-full bg-primary opacity-0"></span><span>Home</span></div><span class="font-caption text-[11px] text-on-surface-variant">Top</span></a><a class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-medium text-on-surface hover:bg-surface-container transition-colors" data-section="best-sellers" href="#best-sellers"><div class="flex items-center gap-2"><span class="mobile-dot w-1.5 h-1.5 rounded-full bg-primary opacity-0"></span><span>Best Sellers</span></div><span class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-wider">Top 4 Picks</span></a><a class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-medium text-on-surface hover:bg-surface-container transition-colors" data-section="about" href="#about"><div class="flex items-center gap-2"><span class="mobile-dot w-1.5 h-1.5 rounded-full bg-primary opacity-0"></span><span>About Rukmini</span></div><span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Culture 2021</span></a><a class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-medium text-on-surface hover:bg-surface-container transition-colors" data-section="menu" href="#menu"><div class="flex items-center gap-2"><span class="mobile-dot w-1.5 h-1.5 rounded-full bg-primary opacity-0"></span><span>The Menu</span></div><span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">24 Releases</span></a><a class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-medium text-on-surface hover:bg-surface-container transition-colors" data-section="reviews" href="#reviews"><div class="flex items-center gap-2"><span class="mobile-dot w-1.5 h-1.5 rounded-full bg-primary opacity-0"></span><span>Reviews</span></div><span class="font-label-caps text-[10px] text-tertiary uppercase tracking-wider font-bold">4.95 ★</span></a><a class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-medium text-on-surface hover:bg-surface-container transition-colors" data-section="visit-us" href="#visit-us"><div class="flex items-center gap-2"><span class="mobile-dot w-1.5 h-1.5 rounded-full bg-primary opacity-0"></span><span>Visit Us &amp; Salon</span></div><span class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-wider">8 Seats Open</span></a></nav><div class="pt-2 border-t border-on-surface/10 flex flex-col gap-2"><a class="mobile-nav-link w-full py-2.5 rounded-full bg-primary text-on-primary text-center font-label-caps text-xs uppercase tracking-widest font-bold shadow hover:bg-on-background transition-colors" href="#visit-us">Reserve Salon Table</a><p class="text-center font-caption text-[11px] text-on-surface-variant">Plot 42, Main Market Road, Gumanpura, Kota · +91 (0744) 242-0199</p></div></div></div><main class="relative w-full bg-surface"><div class="flex flex-col w-full selection:bg-primary selection:text-on-primary font-body-md text-on-surface">
+<!-- 1. HERO POSTER: STICKY HERO BROADSHEET -->
+<section class="sticky top-0 z-0 w-full h-screen overflow-hidden bg-surface-container-low px-3 sm:px-margin-mobile lg:px-margin-desktop pt-16 sm:pt-20 lg:pt-24 pb-2 sm:pb-4 lg:pb-6 flex flex-col justify-between will-change-transform" id="hero">
+<!-- Subtle Dimmer Overlay for Parallax Reveal -->
+<div class="pointer-events-none absolute inset-0 bg-on-background/40 opacity-0 z-30 transition-opacity duration-75 ease-out" id="hero-dimmer"></div>
+<!-- Fine Hairline Background Structural Lines -->
+<div class="pointer-events-none absolute inset-0 grid grid-cols-4 lg:grid-cols-12 opacity-20">
+<div class="h-full border-r border-on-surface"></div>
+<div class="h-full border-r border-on-surface"></div>
+<div class="h-full border-r border-on-surface"></div>
+<div class="h-full border-r border-on-surface hidden lg:block"></div>
+<div class="h-full border-r border-on-surface hidden lg:block"></div>
+<div class="h-full border-r border-on-surface hidden lg:block"></div>
+<div class="h-full border-r border-on-surface hidden lg:block"></div>
+<div class="h-full border-r border-on-surface hidden lg:block"></div>
+<div class="h-full border-r border-on-surface hidden lg:block"></div>
+<div class="h-full border-r border-on-surface hidden lg:block"></div>
+<div class="h-full border-r border-on-surface hidden lg:block"></div>
+<div class="h-full"></div>
+</div>
+<!-- Hero Inner Content (Transforms slightly during scroll) -->
+<div id="hero-content" class="relative z-10 w-full h-full flex flex-col justify-between will-change-transform">
+<!-- Micro Metadata Header Row -->
+<div class="flex items-center justify-between gap-2 pb-1.5 sm:pb-3 border-b border-on-surface/15 text-on-surface-variant font-label-caps text-[9px] sm:text-label-caps tracking-wider sm:tracking-widest uppercase">
+<div class="flex items-center gap-1.5 sm:gap-xs">
+<span class="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary animate-ping"></span>
+<span class="text-on-surface font-semibold">GUMANPURA / KOTA</span>
+<span class="hidden sm:inline">•</span>
+<span class="hidden sm:inline">25°10′N 75°50′E</span>
+</div>
+<div class="hidden sm:flex items-center gap-md">
+<span>BATCH: #OCT-884</span>
+<span class="text-outline-variant">/</span>
+<span>PROOFING CYCLE: 18 HOURS WILD CELL</span>
+</div>
+<div class="flex items-center gap-1 font-caption text-[10px] sm:text-caption text-primary font-semibold">
+<span>245°C HEARTH</span>
+<span class="material-symbols-outlined text-[13px] sm:text-[14px]">local_fire_department</span>
+</div>
+</div>
+<!-- Hero Composition with Responsive Editorial Harmony -->
+<div class="relative z-10 flex flex-col lg:grid lg:grid-cols-12 py-1 sm:py-2 lg:py-4 my-auto items-center w-full">
+  <!-- Line 1: BAKED -->
+  <div class="w-full lg:col-span-12 flex items-center lg:items-baseline justify-center lg:justify-between select-none">
+    <h1 class="font-display-hero text-[44px] sm:text-[68px] lg:text-[108px] xl:text-[126px] leading-[0.88] lg:leading-[0.85] tracking-tighter text-on-surface font-extrabold uppercase text-center lg:text-left">
+      BAKED
+    </h1>
+    <span class="hidden md:inline-block hero-float-right-top font-headline-lg italic font-normal text-tertiary text-right text-[22px] sm:text-[30px] lg:text-[38px] xl:text-[44px] leading-tight max-w-[200px] lg:max-w-[250px]">
+      au levain sauvage, chaque matin.
+    </span>
+  </div>
+
+  <!-- Center Hero Physical Float: In-flow on mobile, absolute center on desktop -->
+  <div class="relative lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 w-[220px] sm:w-[280px] lg:w-[380px] xl:w-[430px] mt-7 mb-5 sm:my-6 lg:my-0 pointer-events-none group">
+    <!-- Mobile Editorial Floating Script Badge -->
+    <div class="lg:hidden absolute -top-3.5 -left-2 z-30">
+      <span class="hero-float-center-script font-headline-lg italic font-normal text-primary text-[22px] sm:text-[28px] tracking-normal px-2.5 py-0.5 bg-surface/95 backdrop-blur-md shadow-sm rounded-lg border border-primary/20">
+        at the
+      </span>
+    </div>
+
+    <div class="hero-float-artifact pointer-events-auto select-none" id="hero-artifact-container">
+      <div class="relative transition-transform duration-700 ease-out transform hover:scale-105">
+        <!-- Ambient Glow under platter -->
+        <div class="hero-glow-pulse absolute inset-x-6 bottom-2 h-20 bg-primary/20 blur-2xl rounded-full"></div>
+
+        <!-- Slides Frame Container with Fixed Aspect Ratio -->
+        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl bg-surface-container-high border border-on-surface/10" id="hero-image-frame">
+          <!-- Slide 0: Viennoiserie -->
+          <img alt="Hearth-baked golden laminated croissant and powdered brioche on stone pedestal" class="hero-slide-img slide-active filter contrast-105" data-badge="LAMINATE NO. 82-B / CRISP CRUST" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Jv3VsaJJY0y0WE4NY-4X79YxfYvv1kpqD-GGFfCUlSxpVje0x2vEx6pvykLWPemnopNkSK1Pyi7GovDKAFtpeqvsY1EfB53uUh-rvrn3Z9bAhIpLoHRGxoqmaGefik2IStpYfGu11ucwdWpipkwegYcEiu_nNwSg8G_jvFl3vbGJLsghUFFw4Urclkc0-4BtlSqV0HgP5KThbHsuEHwLA0mZ8pHray2L8zwh3rvgBULCSXERSEYX"/>
+          <!-- Slide 1: Flaky Patty -->
+          <img alt="72-layer ultra flaky golden artisan puff patty" class="hero-slide-img slide-inactive filter contrast-105" data-badge="72-LAYER MALAI PANEER PATTY" src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+          <!-- Slide 2: Truffle Pasta -->
+          <img alt="Bronze-die artisanal penne pasta in rich wild truffle cream" class="hero-slide-img slide-inactive filter contrast-105" data-badge="BRONZE-DIE TRUFFLE PENNE" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+          <!-- Slide 3: Brioche Burger -->
+          <img alt="Gourmet double brioche smash burger with aged gouda melt" class="hero-slide-img slide-inactive filter contrast-105" data-badge="HEARTH BRIOCHE SMASH BURGER" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+        </div>
+
+        <!-- Heritage Seal Stamp Top-Right -->
+        <div class="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-surface/95 backdrop-blur-md p-1 sm:p-1.5 rounded-full shadow-xl border border-primary/25 flex items-center justify-center z-20">
+          <img alt="Hot Corner Seal" class="w-8 h-8 sm:w-10 sm:h-10 object-contain" src="logo.png"/>
+        </div>
+
+        <!-- Badge overlay stamped on image edge -->
+        <div class="absolute -bottom-2 -left-2 sm:bottom-3 sm:-left-3 bg-on-background/95 backdrop-blur-sm text-surface px-xs sm:px-sm py-1 rounded shadow-lg flex items-center gap-xs z-20 border border-surface/10">
+          <img alt="Hot Corner Logo" class="h-4 w-auto object-contain brightness-125" src="logo.png"/>
+          <span id="hero-image-badge-text" class="font-label-caps text-label-caps uppercase tracking-wider text-[9px] sm:text-[10px] transition-opacity duration-300">LAMINATE NO. 82-B / CRISP CRUST</span>
+        </div>
+
+        <!-- Mini Slide Progress Pills at Top-Left -->
+        <div class="absolute top-2 left-2 z-20 flex items-center gap-1 px-2 py-1 rounded-full bg-on-background/70 backdrop-blur-md border border-surface/10">
+          <span class="hero-slide-dot w-3.5 h-1 rounded-full bg-primary transition-all duration-300"></span>
+          <span class="hero-slide-dot w-1 h-1 rounded-full bg-surface/50 transition-all duration-300"></span>
+          <span class="hero-slide-dot w-1 h-1 rounded-full bg-surface/50 transition-all duration-300"></span>
+          <span class="hero-slide-dot w-1 h-1 rounded-full bg-surface/50 transition-all duration-300"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Line 2: Offset Editorial Script (Desktop Placement, hidden on mobile) -->
+  <div class="hidden lg:flex lg:col-span-12 relative w-full items-center justify-center my-[-8px] lg:my-[-16px] xl:my-[-22px] z-20 select-none">
+    <span class="hero-float-center-script font-headline-lg italic font-light text-primary text-[32px] sm:text-[50px] lg:text-[64px] xl:text-[74px] tracking-normal px-sm lg:px-md py-0.5 bg-surface/85 backdrop-blur-sm shadow-sm rounded-lg">
+      at the
+    </span>
+  </div>
+
+  <!-- Line 3: Ground Anchor (Below image on mobile, bottom line on desktop) -->
+  <div class="w-full lg:col-span-12 flex items-center lg:items-end justify-center lg:justify-between select-none">
+    <h2 class="font-display-hero text-[42px] sm:text-[66px] lg:text-[112px] xl:text-[132px] leading-[0.88] lg:leading-[0.82] tracking-tighter text-on-surface font-extrabold uppercase text-center lg:text-left">
+      CORNER.
+    </h2>
+    <div class="hidden lg:flex flex-col items-end gap-2xs pb-xs text-right hero-float-right-bottom">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface">BROADSHEET REGISTRY No. 04</span>
+      <span class="font-caption text-caption text-on-surface-variant max-w-[190px] xl:max-w-[210px]">Fermented over two twilights. Pulled by hand in Rajasthan.</span>
+    </div>
+  </div>
+
+  <!-- Mobile Tagline -->
+  <p class="block md:hidden text-center font-headline-lg italic text-tertiary text-xs sm:text-sm mt-0.5 opacity-90">
+    au levain sauvage, chaque matin.
+  </p>
+</div><!-- end hero composition grid -->
+<!-- Editorial Spec Strip under Hero -->
+<div class="relative z-10 mt-1 sm:mt-2 lg:mt-4 pt-1.5 sm:pt-3 border-t border-on-surface/10 grid grid-cols-2 sm:grid-cols-4 gap-x-2 gap-y-1 sm:gap-sm lg:gap-md">
+<div>
+<p class="font-label-caps text-[9px] sm:text-label-caps uppercase text-on-surface-variant">FLOUR SOURCE</p>
+<p class="font-title-sm text-[11px] sm:text-title-sm text-on-surface font-semibold truncate">Stone-Milled Sehore</p>
+</div>
+<div>
+<p class="font-label-caps text-[9px] sm:text-label-caps uppercase text-on-surface-variant">OVEN TEMPERATURE</p>
+<p class="font-title-sm text-[11px] sm:text-title-sm text-primary font-semibold truncate">245°C Direct Stone</p>
+</div>
+<div>
+<p class="font-label-caps text-[9px] sm:text-label-caps uppercase text-on-surface-variant">FERMENT HYDRATION</p>
+<p class="font-title-sm text-[11px] sm:text-title-sm text-on-surface font-semibold truncate">82% Cellular Void</p>
+</div>
+<div>
+<p class="font-label-caps text-[9px] sm:text-label-caps uppercase text-on-surface-variant">MORNING CYCLE</p>
+<p class="font-title-sm text-[11px] sm:text-title-sm text-tertiary font-semibold truncate">04:30 AM First Pull</p>
+</div>
+</div><!-- end spec grid -->
+</div><!-- end #hero-content -->
+</section>
+<!-- 2. SLIDING CONTENT CURTAIN (Slides smoothly UP over hero when scrolled) -->
+<div id="content-curtain" class="relative z-20 w-full bg-surface shadow-[0_-25px_60px_rgba(28,28,24,0.18)] rounded-t-[32px] sm:rounded-t-[48px] border-t border-on-surface/10 overflow-hidden">
+<!-- INFINITE TICKER TAPE -->
+<div class="w-full overflow-hidden bg-primary text-on-primary py-xs flex items-center select-none shadow-inner">
+<div class="flex gap-lg items-center whitespace-nowrap animate-[marquee_24s_linear_infinite] uppercase font-label-caps text-label-caps tracking-[0.25em]">
+<span>SLOW FERMENTATION</span>
+<span class="text-tertiary-fixed">✦</span>
+<span>SINGLE-ORIGIN ROASTS</span>
+<span class="text-tertiary-fixed">✦</span>
+<span>GUMANPURA MARKET KOTA</span>
+<span class="text-tertiary-fixed">✦</span>
+<span>4:30 AM STONE HEARTH FIRE</span>
+<span class="text-tertiary-fixed">✦</span>
+<span>WILD YEAST PATISSERIE</span>
+<span class="text-tertiary-fixed">✦</span>
+<span>NATURAL BUTTER SHEETS</span>
+<span class="text-tertiary-fixed">✦</span>
+<span>SLOW FERMENTATION</span>
+<span class="text-tertiary-fixed">✦</span>
+<span>SINGLE-ORIGIN ROASTS</span>
+<span class="text-tertiary-fixed">✦</span>
+<span>GUMANPURA MARKET KOTA</span>
+<span class="text-tertiary-fixed">✦</span>
+</div>
+</div>
+<!-- 2. SECTION: BEST SELLERS -->
+<section class="relative w-full px-margin-mobile lg:px-margin-desktop py-2xl lg:py-4xl bg-surface scroll-mt-20 lg:scroll-mt-24" id="best-sellers">
+<!-- Huge Watermark Index Numeral -->
+<div class="pointer-events-none absolute right-4 lg:right-16 top-8 font-display-hero text-[140px] lg:text-[240px] leading-none text-surface-container-highest/50 select-none font-extrabold">
+      01
+    </div>
+<!-- Section Header -->
+<div class="flex flex-col gap-xs max-w-3xl mb-2xl relative z-10">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-2xs rounded bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider font-bold">The Café &amp; Hearth Ledger</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Kota's Most-Loved Daily Orders</span>
+</div>
+<h2 class="font-fraunces text-[40px] sm:text-[58px] lg:text-[72px] xl:text-[84px] leading-[0.92] tracking-tight text-on-surface font-semibold mt-xs">
+      The Ledger / <span class="italic font-normal text-primary">Best Sellers &amp; Café Signatures.</span>
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-xs">
+      Our most coveted café creations—from 72-layer flaky hearth patties and bronze-die truffle pastas to golden brioche smash burgers and legendary morning viennoiserie. Handcrafted in strictly limited daily batches.
+    </p>
+</div>
+<!-- 4-Column Showcase Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative z-10">
+<!-- Best Seller 1: Patty -->
+<div class="flex flex-col justify-between p-lg rounded-xl bg-surface-container-low border border-on-surface/10 hover:border-primary/40 transition-all group shadow-sm hover:shadow-md">
+<div class="flex flex-col gap-xs">
+<!-- Image Container -->
+<div class="relative w-full h-44 sm:h-48 rounded-lg overflow-hidden mb-xs bg-surface-container">
+<img alt="Smoked Malai Paneer Tikka Patty" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-on-background/80 backdrop-blur-sm text-surface font-label-caps text-[9px] tracking-wider uppercase font-bold">
+    Deck Flaky Bake
+  </div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-title-sm text-xs font-extrabold shadow-sm">
+    ₹ 220
+  </div>
+</div>
+<div class="flex items-center justify-between">
+<span class="px-xs py-2xs rounded bg-primary/10 text-primary font-label-caps text-label-caps font-bold">NO. 1 CAFÉ SAVORY</span>
+<span class="font-title-sm text-title-sm text-on-surface font-extrabold">₹ 220</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mt-xs">
+          Smoked Malai Paneer Tikka Patty
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2xs">
+          72-layer ultra-flaky puff pastry laminated with cultured French butter, stuffed with charcoal-smoked malai paneer, caramelized onions, kasuri methi cream, and house mint chimichurri.
+        </p>
+<div class="mt-xs pt-xs border-t border-on-surface/10 flex flex-col gap-2xs text-caption font-caption text-outline">
+<span class="text-on-surface font-medium">Lamination: 72 Hand-Folded Butter Sheets</span>
+<span class="text-tertiary font-semibold">☕ Pair: Chambal Iced Espresso Tonic</span>
+<span class="text-primary font-medium">Batch: Fresh Deck-Pulled Every 2 Hours</span>
+</div>
+</div>
+<button class="mt-md w-full py-xs px-md rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface transition-colors font-title-sm text-title-sm text-center font-semibold" onclick="handleReserveClick(this)" type="button">
+        Order at Counter
+      </button>
+</div>
+<!-- Best Seller 2: Pasta -->
+<div class="flex flex-col justify-between p-lg rounded-xl bg-surface-container-low border border-on-surface/10 hover:border-primary/40 transition-all group shadow-sm hover:shadow-md">
+<div class="flex flex-col gap-xs">
+<!-- Image Container -->
+<div class="relative w-full h-44 sm:h-48 rounded-lg overflow-hidden mb-xs bg-surface-container">
+<img alt="Wild Truffle and Forest Mushroom Penne" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-on-background/80 backdrop-blur-sm text-surface font-label-caps text-[9px] tracking-wider uppercase font-bold">
+    Bronze-Die Durum
+  </div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-title-sm text-xs font-extrabold shadow-sm">
+    ₹ 460
+  </div>
+</div>
+<div class="flex items-center justify-between">
+<span class="px-xs py-2xs rounded bg-primary/10 text-primary font-label-caps text-label-caps font-bold">SIGNATURE PASTA</span>
+<span class="font-title-sm text-title-sm text-on-surface font-extrabold">₹ 460</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mt-xs">
+          Wild Truffle &amp; Forest Mushroom Penne
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2xs">
+          Bronze-die artisanal penne folded in a velvety black truffle cream emulsion, sautéed cremini &amp; wild shiitake mushrooms, 24-month aged Parmigiano Reggiano, and toasted sourdough herb crunch.
+        </p>
+<div class="mt-xs pt-xs border-t border-on-surface/10 flex flex-col gap-2xs text-caption font-caption text-outline">
+<span class="text-on-surface font-medium">Pasta: Bronze-Die Extruded Durum</span>
+<span class="text-tertiary font-semibold">🧀 Finish: 24-Month Parmigiano Reggiano</span>
+<span class="text-primary font-medium">Kitchen: Made to Order in 12 Mins</span>
+</div>
+</div>
+<button class="mt-md w-full py-xs px-md rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface transition-colors font-title-sm text-title-sm text-center font-semibold" onclick="handleReserveClick(this)" type="button">
+        Order for Table
+      </button>
+</div>
+<!-- Best Seller 3: Burger -->
+<div class="flex flex-col justify-between p-lg rounded-xl bg-surface-container-low border border-on-surface/10 hover:border-primary/40 transition-all group shadow-sm hover:shadow-md">
+<div class="flex flex-col gap-xs">
+<!-- Image Container -->
+<div class="relative w-full h-44 sm:h-48 rounded-lg overflow-hidden mb-xs bg-surface-container">
+<img alt="The Hot Corner Truffle Melt Brioche Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-on-background/80 backdrop-blur-sm text-surface font-label-caps text-[9px] tracking-wider uppercase font-bold">
+    Hearth Brioche Bun
+  </div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-title-sm text-xs font-extrabold shadow-sm">
+    ₹ 390
+  </div>
+</div>
+<div class="flex items-center justify-between">
+<span class="px-xs py-2xs rounded bg-tertiary/10 text-tertiary font-label-caps text-label-caps font-bold">SIGNATURE BURGER</span>
+<span class="font-title-sm text-title-sm text-on-surface font-extrabold">₹ 390</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mt-xs">
+          Truffle Melt Double Brioche Burger
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2xs">
+          House-baked golden sesame butter brioche bun, crisp spiced herb &amp; aged gouda patty, charred shallot confit, roasted garlic truffle aioli, pickled gherkins, and butterhead greens. Served with seasoned wedges.
+        </p>
+<div class="mt-xs pt-xs border-t border-on-surface/10 flex flex-col gap-2xs text-caption font-caption text-outline">
+<span class="text-on-surface font-medium">Bun: 24-Hour Hearth Butter Brioche</span>
+<span class="text-tertiary font-semibold">🍟 Includes: Hand-Cut Spiced Wedges</span>
+<span class="text-primary font-medium">Service: All-Day Kitchen Special</span>
+</div>
+</div>
+<button class="mt-md w-full py-xs px-md rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface transition-colors font-title-sm text-title-sm text-center font-semibold" onclick="handleReserveClick(this)" type="button">
+        Order for Table
+      </button>
+</div>
+<!-- Best Seller 4: Bakery Icon -->
+<div class="flex flex-col justify-between p-lg rounded-xl bg-surface-container-low border border-on-surface/10 hover:border-primary/40 transition-all group shadow-sm hover:shadow-md">
+<div class="flex flex-col gap-xs">
+<!-- Image Container -->
+<div class="relative w-full h-44 sm:h-48 rounded-lg overflow-hidden mb-xs bg-surface-container">
+<img alt="Cardamom Saffron Brioche Feuilletée" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-on-background/80 backdrop-blur-sm text-surface font-label-caps text-[9px] tracking-wider uppercase font-bold">
+    27-Layer Feuilletée
+  </div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-sm text-on-surface font-title-sm text-xs font-extrabold shadow-sm">
+    ₹ 280
+  </div>
+</div>
+<div class="flex items-center justify-between">
+<span class="px-xs py-2xs rounded bg-primary/10 text-primary font-label-caps text-label-caps font-bold">NO. 1 MORNING BAKE</span>
+<span class="font-title-sm text-title-sm text-on-surface font-extrabold">₹ 280</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mt-xs">
+          Cardamom Saffron Brioche Feuilletée
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2xs">
+          Laminated rich egg dough folded with cultured A2 churned butter, bruised Idukki cardamom pods, and Kashmiri saffron sugar syrup. Kota's morning sanctuary icon since day one.
+        </p>
+<div class="mt-xs pt-xs border-t border-on-surface/10 flex flex-col gap-2xs text-caption font-caption text-outline">
+<span class="text-on-surface font-medium">Lamination: 27 Folded Butter Layers</span>
+<span class="text-tertiary font-semibold">☕ Pair: Velvet Flat White or Kyoto Drip</span>
+<span class="text-primary font-medium">Batch: 24 Pulled Daily at 07:30</span>
+</div>
+</div>
+<button class="mt-md w-full py-xs px-md rounded bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface transition-colors font-title-sm text-title-sm text-center font-semibold" onclick="handleReserveClick(this)" type="button">
+        Reserve Batch
+      </button>
+</div>
+</div>
+</section>
+
+<!-- 3. SECTION: ABOUT -->
+<section class="relative w-full px-margin-mobile lg:px-margin-desktop py-2xl lg:py-4xl bg-surface-container-low overflow-hidden scroll-mt-20 lg:scroll-mt-24" id="about">
+<!-- Watermark Background -->
+<div class="pointer-events-none absolute left-[-10px] bottom-4 font-display-hero text-[160px] lg:text-[280px] leading-none text-surface-container-highest/40 select-none font-bold">
+      ABOUT
+    </div>
+<div class="relative z-10 flex flex-col gap-xs max-w-4xl mb-2xl">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-2xs rounded bg-secondary-container text-on-secondary-container font-label-caps text-label-caps uppercase tracking-wider font-bold">The Provenance</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Hot Corner Story &amp; Philosophy</span>
+</div>
+<h2 class="font-syne text-[36px] sm:text-[54px] lg:text-[68px] xl:text-[78px] leading-[0.92] tracking-tighter text-on-surface font-extrabold uppercase mt-xs">
+      Bred in Rajasthan, <span class="text-primary">Fired in Stone</span>, Printed in Rigor.
+    </h2>
+</div>
+<!-- 2-Column Broadside Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start relative z-10">
+<!-- Left: Narrative & Pillars (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-lg">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+        Hot Corner was conceived in Gumanpura, Kota in 2024 as an antidote to industrial fast-baking and hurried commercial espresso. We operate like an artisanal print broadsheet: every batch has an edition ledger, every flour has a traceable pedigree, and every coffee lot is roasted to preserve its living terroir.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-md pt-md border-t border-on-surface/10">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-caps text-label-caps text-primary font-bold">I. THE LIVING MOTHER</span>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold">‘Rukmini’ (Yr 4)</h4>
+<p class="font-caption text-caption text-on-surface-variant">
+            Never commercial yeast. 18 to 72 hours of cold lactic fermentation unlocks open cellular honeycomb crumb and effortless digestibility.
+          </p>
+</div>
+<div class="flex flex-col gap-2xs">
+<span class="font-label-caps text-label-caps text-primary font-bold">II. ANCIENT DURUM GRAINS</span>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Stone-Milled Sehore</h4>
+<p class="font-caption text-caption text-on-surface-variant">
+            Locally milled wheat retains alive germ oils. Combined with quartz-filtered Chambal water balanced to 135 TDS for vivid flavor depth.
+          </p>
+</div>
+<div class="flex flex-col gap-2xs">
+<span class="font-label-caps text-label-caps text-primary font-bold">III. ARCHITECTURAL CALM</span>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Lime-Wash &amp; Teak</h4>
+<p class="font-caption text-caption text-on-surface-variant">
+            Crushed quartz terrazzo and breathable Rajasthani earthen plaster. A neighborhood sanctuary for morning reading and slow conversation.
+          </p>
+</div>
+</div>
+<div class="p-md rounded-xl bg-surface border border-on-surface/10 flex items-center justify-between gap-md shadow-sm relative overflow-hidden">
+<div class="relative z-10">
+<span class="font-label-caps text-label-caps uppercase text-tertiary font-bold">THE FOUNDER'S CONVICTION</span>
+<p class="font-headline-md text-headline-md text-on-surface italic mt-2xs">
+            “Bread is not a manufactured commodity. It is fermented patience, stone heat, and honest human touch.”
+          </p>
+</div>
+<div class="shrink-0 hidden sm:flex items-center justify-center w-14 h-14 rounded-full bg-surface-container border border-on-surface/10 p-2 shadow-inner">
+<img alt="Hot Corner Signature Crest" class="w-full h-full object-contain opacity-90" src="logo.png"/>
+</div>
+</div>
+</div>
+<!-- Right: Diagnostic Spec & Starter Ledger (5 cols) -->
+<div class="lg:col-span-5 bg-surface p-lg rounded-xl border border-on-surface/10 shadow-sm flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-md bg-surface-container p-0.5 border border-on-surface/10 flex items-center justify-center">
+<img alt="Hot Corner Seal" class="h-full w-auto object-contain" src="logo.png"/>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-tertiary font-bold tracking-widest">DIAGNOSTIC MATRIX</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+</div>
+<div class="flex flex-col gap-2xs">
+<span class="font-caption text-caption text-on-surface-variant uppercase">Living Mother Starter</span>
+<span class="font-headline-md text-headline-md text-on-surface">‘Rukmini’ — 4 Years Cultured</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Inoculated in Rajasthan, sustained daily on stone-milled whole durum wheat and Chambal spring water.</p>
+</div>
+<!-- Honeycomb Density Chart -->
+<div class="w-full bg-surface-container-low p-sm rounded-lg flex flex-col gap-xs">
+<div class="flex justify-between text-caption font-caption">
+<span class="text-on-surface font-medium">Cellular Honeycomb Alveoli</span>
+<span class="text-primary font-bold">89.4% Porosity Volume</span>
+</div>
+<svg class="w-full h-16 text-primary" fill="none" stroke="currentColor" viewbox="0 0 200 50">
+<path d="M0 40 Q25 10 50 35 T100 20 T150 42 T200 15" stroke-linecap="round" stroke-width="2.5"></path>
+<circle cx="50" cy="35" fill="currentColor" r="4"></circle>
+<circle cx="100" cy="20" fill="currentColor" r="4"></circle>
+<circle cx="150" cy="42" fill="currentColor" r="4"></circle>
+</svg>
+<div class="flex justify-between text-[11px] font-caption text-outline">
+<span>01: Bulk Ferment (26°C)</span>
+<span>02: Cold Retard (4°C)</span>
+<span>03: Stone Deck (245°C)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm pt-xs border-t border-on-surface/10 text-caption font-caption">
+<div>
+<p class="text-on-surface-variant uppercase font-label-caps">Oven Deck</p>
+<p class="font-title-sm text-title-sm text-primary font-bold">245°C Direct Stone</p>
+</div>
+<div>
+<p class="text-on-surface-variant uppercase font-label-caps">Coffee Elevation</p>
+<p class="font-title-sm text-title-sm text-on-surface font-bold">1,350m Araku Canopy</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4. SECTION: MENU -->
+<section class="relative w-full px-margin-mobile lg:px-margin-desktop py-2xl lg:py-4xl bg-surface scroll-mt-20 lg:scroll-mt-24" id="menu">
+<!-- Huge Watermark -->
+<div class="pointer-events-none absolute right-6 top-8 font-display-hero text-[140px] lg:text-[240px] leading-none text-surface-container-highest/50 select-none font-extrabold">
+      MENU
+    </div>
+<!-- Section Header -->
+<div class="flex flex-col gap-xs max-w-3xl mb-xl relative z-10">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-2xs rounded bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider font-bold">The Broadsheet Menu</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Daily Hearth, Kitchen &amp; Bar</span>
+</div>
+<h2 class="font-cormorant text-[42px] sm:text-[62px] lg:text-[78px] xl:text-[90px] leading-[0.92] tracking-tight text-on-surface font-semibold mt-xs">
+      The Daily Broadsheet Menu / <span class="italic font-normal text-primary">Hearth to Table.</span>
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-xs">
+      Hand-pulled flaky patties, fresh bronze-die pastas, house brioche smash burgers, 72-hour sourdough melts, and manual bar brews. Prepared unhurriedly with clean, uncompromised ingredients in Gumanpura.
+    </p>
+</div>
+<!-- Category Filter Tabs -->
+<div class="relative z-10 flex flex-wrap items-center gap-xs pb-lg border-b border-on-surface/10 mb-xl font-title-sm text-title-sm">
+<button class="menu-tab-btn px-sm py-xs rounded bg-primary text-on-primary font-semibold transition-all shadow-sm" onclick="filterMenu('all', this)" type="button">All Releases (24)</button>
+<button class="menu-tab-btn px-sm py-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterMenu('patties', this)" type="button">Patties &amp; Puffs</button>
+<button class="menu-tab-btn px-sm py-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterMenu('pasta', this)" type="button">Artisanal Pastas</button>
+<button class="menu-tab-btn px-sm py-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterMenu('burgers', this)" type="button">Burgers &amp; Melts</button>
+<button class="menu-tab-btn px-sm py-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterMenu('sides', this)" type="button">Fries &amp; Small Plates</button>
+<button class="menu-tab-btn px-sm py-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterMenu('coffee', this)" type="button">Coffee &amp; Coolers</button>
+<button class="menu-tab-btn px-sm py-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="filterMenu('bakery', this)" type="button">Patisserie &amp; Breads</button>
+</div>
+<!-- Menu Categorized Grid -->
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-x-xl gap-y-xl" id="menu-items-container">
+<!-- Column 1: Patties & Savory Puffs -->
+<div class="menu-category-group flex flex-col gap-md" data-category="patties">
+<div class="pb-xs border-b border-on-surface/15 flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">01 / Handcrafted Patties &amp; Savory Puffs</h3>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Deck-Fired Every 2 Hours</span>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Smoked Malai Paneer Tikka Patty</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">No. 1 Savory</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 220</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">72-layer ultra-flaky puff pastry stuffed with charcoal-tandoor smoked malai paneer, caramelized onions, kasuri methi cream, and house mint chimichurri.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">The Kota Heritage Potato &amp; Pea Khasta Puff</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">House Classic</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 180</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Rajasthan's timeless bakery puff elevated: cumin-tempered baby potatoes, sweet green peas, roasted coriander seeds, ginger, and amchur drizzle.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Wild Cremini Mushroom &amp; Truffle Confit Patty</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-caps text-[9px] uppercase font-bold tracking-wider">Chef's Pick</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 240</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Flaky butter feuilletée filled with slow-braised cremini and shiitake mushrooms, thyme butter, caramelized leeks, and a touch of white truffle oil.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Sun-Dried Tomato &amp; Goat Cheese Danish</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Limited Run</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 260</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Savory laminated pastry nest filled with whipped artisan goat cheese, Italian sun-dried tomatoes, kalamata tapenade, and cold-pressed oregano oil.</p>
+</div>
+</div>
+<!-- Column 2: Artisanal Pastas -->
+<div class="menu-category-group flex flex-col gap-md" data-category="pasta">
+<div class="pb-xs border-b border-on-surface/15 flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">02 / Artisanal Pastas &amp; Comfort Bowls</h3>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Bronze-Die Extruded Durum</span>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Wild Truffle &amp; Forest Mushroom Penne</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">Signature Pasta</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 460</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Bronze-die penne in black truffle cream emulsion, sautéed cremini &amp; shiitake mushrooms, 24-month aged Parmigiano Reggiano, and sourdough herb pangrattato.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Slow-Simmered Burrata &amp; Heirloom Tomato Rigatoni</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-caps text-[9px] uppercase font-bold tracking-wider">Guest Favorite</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 480</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Ridged rigatoni folded in San Marzano tomato reduction, slow garlic confit, topped with a whole torn artisanal burrata, and fresh Genovese basil drizzle.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Genovese Pine Nut Pesto Fusilli with Bocconcini</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Fresh Pesto</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 440</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Bronze-die spiral pasta tossed in freshly pounded sweet basil pesto, toasted pine nuts, extra virgin olive oil, creamy molten bocconcini, and cracked black pepper.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Smoked Paprika &amp; Confit Garlic Arrabiata Penne</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">Spicy Hearth</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 410</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Fiery roasted red bell pepper and tomato sugo, charred Guntur chili flakes, crispy garlic flakes, and fresh sweet marjoram leaves.</p>
+</div>
+</div>
+<!-- Column 3: Brioche Burgers & Melts -->
+<div class="menu-category-group flex flex-col gap-md" data-category="burgers">
+<div class="pb-xs border-b border-on-surface/15 flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">03 / Hearth Brioche Burgers &amp; Sourdough Melts</h3>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Butter Brioche &amp; 72H Sourdough</span>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">The Hot Corner Truffle Melt Brioche Burger</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">House Special</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 390</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">House-baked golden sesame butter brioche bun, crisp spiced herb &amp; aged gouda patty, charred shallot confit, roasted garlic truffle aioli, pickled gherkins, and butterhead greens. Served with seasoned potato crisps.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Crispy Peri-Peri Spiced Paneer Brioche Burger</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-caps text-[9px] uppercase font-bold tracking-wider">Chef's Pick</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 360</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Panko-crusted spiced cottage cheese steak, crunchy purple cabbage and jalapeño slaw, smoked paprika remoulade, on toasted butter brioche.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">72-Hour Sourdough Truffle Bocconcini Melt</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Sourdough Toastie</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 380</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Golden butter-griddled slices of our 72-hour sourdough batard, molten fior di latte and bocconcini, sun-dried tomato pesto, and hot chili-infused wild honey dip.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Smoked English Cheddar &amp; Pickled Jalapeño Toastie</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Molten Cheese</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 340</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Aged English cheddar, Monterrey Jack, and thinly sliced pickled green jalapenos pressed with wholegrain mustard butter inside crusty country sourdough.</p>
+</div>
+</div>
+<!-- Column 4: Small Plates & Loaded Fries -->
+<div class="menu-category-group flex flex-col gap-md" data-category="sides">
+<div class="pb-xs border-b border-on-surface/15 flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">04 / Café Small Plates &amp; Loaded Fries</h3>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Hand-Cut Russets &amp; Sharers</span>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Truffle &amp; Aged Parmesan Hand-Cut Fries</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">Best Seller Side</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 260</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Double-cooked skin-on fries tossed in white truffle oil, freshly grated 24-month Parmigiano Reggiano, and cracked sea salt. Served with confit garlic aioli.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Smoked Peri-Peri Crispy Fries with Labneh Dip</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-caps text-[9px] uppercase font-bold tracking-wider">House Seasoning</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 220</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Crisp hand-cut potato fries dusted in house-blended African bird's eye chili and cumin seasoning, served with cool chilled garlic labneh.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Wood-Fired Garlic &amp; Mozzarella Sourdough Pull-Apart</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Sharing Loaf</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 280</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Mini hearth sourdough batard sliced and stuffed with roasted garlic herb butter, molten mozzarella, and fresh garden rosemary.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Burrata &amp; Blistered Heirloom Tomato Bruschetta</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Light Bite</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 360</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Charred garlic-rubbed sourdough crostini, creamy Puglia burrata, balsamic reduction glaze, sweet heirloom cherry tomatoes, and micro-basil.</p>
+</div>
+</div>
+<!-- Column 5: Specialty Coffee & Coolers -->
+<div class="menu-category-group flex flex-col gap-md" data-category="coffee">
+<div class="pb-xs border-b border-on-surface/15 flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">05 / Specialty Coffee, Shakes &amp; Coolers</h3>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Manual Bar &amp; Cold Alchemy</span>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Kyoto Cold Extraction Tower (12H Drip)</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">Signature Cold Drip</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 290</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Extracted drop by drop over frozen glassware. Notes of dark chocolate, dried mission figs, and cold bourbon vanilla bloom.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Iced Spanish Cortado Latte</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-caps text-[9px] uppercase font-bold tracking-wider">Barista Pick</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 260</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Single-origin espresso pull shaken over sweetened condensed milk, cinnamon bark infusion, and chilled organic whole milk.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Chambal Citrus Iced Espresso Tonic</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Summer Refresher</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 250</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Double shot espresso poured over chilled artisanal tonic water, candied lemon wheel, and fresh rosemary sprig.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Lotus Biscoff Salted Caramel Frappé</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">Decadent Shake</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 280</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Belgian Biscoff biscuit spread blended with espresso, sea salt caramel swirl, whipped cream, and biscuit crumble.</p>
+</div>
+</div>
+<!-- Column 6: Fine Patisserie & Artisan Breads -->
+<div class="menu-category-group flex flex-col gap-md" data-category="bakery">
+<div class="pb-xs border-b border-on-surface/15 flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">06 / Fine Patisserie &amp; Artisan Breads</h3>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Stone Hearth Loaves &amp; Pastry</span>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Cardamom Saffron Brioche Feuilletée</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[9px] uppercase font-bold tracking-wider">No. 1 Bake</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 280</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Layered rich brioche folded with cultured A2 butter, bruised cardamom pods, and Kashmiri saffron nectar.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">San Sebastián Basque Burnt Cheesecake (Slice)</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-caps text-[9px] uppercase font-bold tracking-wider">Molten Center</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 340</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Scorched caramelized crust with a molten, custardy center, served with Chambal wild berry and strawberry coulis.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Terracotta Monolith Fig Gateau (Slice)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Vault Archive</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 420</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Earl Grey chiffon sponge, fresh Turkish mission figs, Valrhona 70% dark ganache, and edible 24K gold leaf.</p>
+</div>
+<!-- Item -->
+<div class="py-xs flex flex-col gap-2xs border-t border-on-surface/10">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">72-Hour Country Sourdough Batard (Whole Loaf)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px] uppercase font-bold tracking-wider">Stone Hearth</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-extrabold shrink-0">₹ 340</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Blistered dark mahogany crust with wild open alveoli, whole durum flour, and Thar sea salt. Sliced or whole.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 5. SECTION: REVIEWS -->
+<section class="relative w-full px-margin-mobile lg:px-margin-desktop py-2xl lg:py-4xl bg-surface-container-low scroll-mt-20 lg:scroll-mt-24" id="reviews">
+<!-- Watermark -->
+<div class="pointer-events-none absolute left-6 top-8 font-display-hero text-[140px] lg:text-[240px] leading-none text-surface-container-highest/40 select-none font-bold">
+      VOICES
+    </div>
+<!-- Section Header with Title & Broadsheet Carousel Navigation Controls -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md mb-xl relative z-10">
+<div class="flex flex-col gap-xs max-w-3xl">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-2xs rounded bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps uppercase tracking-wider font-bold">Press &amp; Patron Chronicle</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Critical Acclaim</span>
+</div>
+<h2 class="font-italiana text-[42px] sm:text-[62px] lg:text-[80px] xl:text-[94px] leading-[0.92] tracking-normal text-on-surface mt-xs">
+      Critical Acclaim &amp; <span class="italic font-normal text-primary">Guest Chronicle.</span>
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-xs">
+      Reflections from leading culinary dispatches, architectural editors, and Kota's daily morning patrons.
+    </p>
+</div>
+<!-- Live Carousel Navigation Controls -->
+<div class="flex items-center gap-2 sm:gap-3 shrink-0 self-start md:self-end">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-on-surface/10 font-label-caps text-xs text-on-surface-variant shadow-sm select-none">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span id="review-counter" class="font-mono text-xs text-on-surface font-semibold">01 / 06</span>
+</div>
+<button id="review-prev-btn" aria-label="Previous Review" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface border border-on-surface/10 hover:border-primary hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center shadow-sm active:scale-95 text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] sm:text-[20px]">west</span>
+</button>
+<button id="review-next-btn" aria-label="Next Review" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface border border-on-surface/10 hover:border-primary hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center shadow-sm active:scale-95 text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px] sm:text-[20px]">east</span>
+</button>
+</div>
+</div>
+<!-- Review Cards Carousel Viewport -->
+<div id="reviews-carousel-viewport" class="w-full overflow-hidden relative z-10 select-none py-2 -my-2">
+<div id="reviews-track" class="flex transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] will-change-transform">
+<!-- Slide 1 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #01</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “Hot Corner has quietly redefined what morning hospitality looks like in northern India. Their 72-hour sourdough batard exhibits an alveolation and shatter-crisp crust that rivals the best boulangeries of Paris.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">The Broadsheet Culinary Dispatch</span>
+<span class="font-caption text-caption text-on-surface-variant">Julian Varma • Food &amp; Gastronomy Editor</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #02</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “Stepping into this lime-washed salon off Gumanpura Road is a sensory revelation. The contrast of cardamom brioche and precision Kyoto cold drip coffee feels like living inside an architectural monograph.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Modern Spaces &amp; Architecture</span>
+<span class="font-caption text-caption text-on-surface-variant">Maya Singhania • Spatial Design Critic</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #03</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “The cardamom saffron brioche is miraculous. Paired with their single-origin Araku pour-over, it transforms a morning in Kota into an exquisite ritual. There is simply no other bakery like this in Rajasthan.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Kota Gastronomy Circle</span>
+<span class="font-caption text-caption text-on-surface-variant">Ananya Shekhawat • Resident &amp; Patron</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #04</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “To taste Rukmini starter bread is to taste live desert fermentation at its zenith. The crust caramelization from their 245°C direct stone deck brings a deep nutty complexity found nowhere else.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">The Rajasthan Epicure</span>
+<span class="font-caption text-caption text-on-surface-variant">Vikramaditya Rathore • Culinary Historian</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 5 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #05</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “Minimalist lime plaster, crushed quartz terrazzo, and the warm aroma of bubbling butter feuilletée. Hot Corner is a masterclass in regional warmth meeting Nordic-Japanese architectural restraint.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Architectural Digest India</span>
+<span class="font-caption text-caption text-on-surface-variant">Tara Kulkarni • Design Correspondent</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 6 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #06</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “Their Kyoto slow-drip extraction tower is extraordinary. A 12-hour extraction yielding notes of dried mission fig, raw cacao nibs, and crisp cedar. An absolute morning sanctuary for coffee purists.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">The Daily Roast Chronicle</span>
+<span class="font-caption text-caption text-on-surface-variant">Devendra Meena • Specialty Q-Grader</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- CLONES FOR SEAMLESS INFINITE LOOP (Slides 1, 2, 3) -->
+<!-- Clone 1 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3" aria-hidden="true">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #01</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “Hot Corner has quietly redefined what morning hospitality looks like in northern India. Their 72-hour sourdough batard exhibits an alveolation and shatter-crisp crust that rivals the best boulangeries of Paris.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">The Broadsheet Culinary Dispatch</span>
+<span class="font-caption text-caption text-on-surface-variant">Julian Varma • Food &amp; Gastronomy Editor</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Clone 2 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3" aria-hidden="true">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #02</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “Stepping into this lime-washed salon off Gumanpura Road is a sensory revelation. The contrast of cardamom brioche and precision Kyoto cold drip coffee feels like living inside an architectural monograph.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Modern Spaces &amp; Architecture</span>
+<span class="font-caption text-caption text-on-surface-variant">Maya Singhania • Spatial Design Critic</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Clone 3 -->
+<div class="review-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 sm:px-3" aria-hidden="true">
+<div class="h-full p-lg rounded-xl bg-surface border border-on-surface/10 flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">CHRONICLE #03</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface leading-snug italic">
+            “The cardamom saffron brioche is miraculous. Paired with their single-origin Araku pour-over, it transforms a morning in Kota into an exquisite ritual. There is simply no other bakery like this in Rajasthan.”
+          </p>
+</div>
+<div class="mt-lg pt-sm border-t border-on-surface/10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Kota Gastronomy Circle</span>
+<span class="font-caption text-caption text-on-surface-variant">Ananya Shekhawat • Resident &amp; Patron</span>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center p-1 border border-on-surface/10 opacity-70 group-hover:opacity-100 transition-opacity">
+<img alt="Hot Corner" class="w-full h-full object-contain" src="logo.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Indicator Progress Dots -->
+<div id="review-dots-container" class="flex items-center justify-center gap-2 mt-md relative z-10">
+<button aria-label="Go to review 1" class="review-dot h-1.5 w-6 rounded-full bg-primary transition-all duration-300" onclick="goToReviewSlide(0)" type="button"></button>
+<button aria-label="Go to review 2" class="review-dot h-1.5 w-2 rounded-full bg-on-surface/20 hover:bg-on-surface/40 transition-all duration-300" onclick="goToReviewSlide(1)" type="button"></button>
+<button aria-label="Go to review 3" class="review-dot h-1.5 w-2 rounded-full bg-on-surface/20 hover:bg-on-surface/40 transition-all duration-300" onclick="goToReviewSlide(2)" type="button"></button>
+<button aria-label="Go to review 4" class="review-dot h-1.5 w-2 rounded-full bg-on-surface/20 hover:bg-on-surface/40 transition-all duration-300" onclick="goToReviewSlide(3)" type="button"></button>
+<button aria-label="Go to review 5" class="review-dot h-1.5 w-2 rounded-full bg-on-surface/20 hover:bg-on-surface/40 transition-all duration-300" onclick="goToReviewSlide(4)" type="button"></button>
+<button aria-label="Go to review 6" class="review-dot h-1.5 w-2 rounded-full bg-on-surface/20 hover:bg-on-surface/40 transition-all duration-300" onclick="goToReviewSlide(5)" type="button"></button>
+</div>
+<!-- Aggregate Banner -->
+<div class="mt-xl p-md rounded-xl bg-surface border border-on-surface/10 flex flex-wrap items-center justify-between gap-md relative z-10 text-on-surface">
+<div class="flex items-center gap-md">
+<div class="text-3xl font-extrabold font-headline-lg text-primary">4.95</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-0.5 text-primary text-sm">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Based on 1,420+ Verified Morning Guest Reviews</span>
+</div>
+</div>
+<div class="flex items-center gap-md font-label-caps text-label-caps uppercase text-on-surface-variant">
+<span class="px-sm py-xs bg-primary/10 text-primary rounded font-bold">Winner: Best Artisan Bakery &amp; Café 2024</span>
+</div>
+</div>
+</section>
+
+<!-- 6. SECTION: VISIT US -->
+<section class="relative w-full overflow-hidden bg-on-background text-surface py-3xl lg:py-4xl px-margin-mobile lg:px-margin-desktop scroll-mt-20 lg:scroll-mt-24" id="visit-us">
+<!-- Background Texture Overlay with Image -->
+<div class="absolute inset-0 opacity-20">
+<img alt="Interior atmosphere backdrop of Hot Corner bakery salon" class="w-full h-full object-cover filter blur-sm scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaB6M6vpT5xwjZe1dwfhPJPdne1WnW1ooZkaFRh480nyvzyyR1TRx2pzjHFVda9-Mlp8Om6iAyTVZtnDju4PnELEwPQTWjUCIlW7ha_OVeKIoQPb6KOlWkEENZ9-Cj2yQMm0Fi2JoWATqAN3IQZS0PtaefGZ8xuJGd1T84-gG--vwYu-WNoKbZ04eWpuIJuntVObkiGN4ea24q3TcWJC_OJNnc7T9x6zEik3es-hDWn7AprZS0dqeM"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/85 to-transparent"></div>
+<!-- Container -->
+<div class="relative z-10 max-w-6xl mx-auto flex flex-col gap-2xl">
+<!-- Top Title -->
+<div class="text-center flex flex-col items-center gap-xs">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.3em] text-primary font-bold">
+        SANCTUARY &amp; HEARTH
+      </span>
+<h2 class="font-display-hero text-[46px] sm:text-[72px] lg:text-[96px] xl:text-[112px] leading-[0.9] tracking-tight uppercase font-extrabold text-surface-bright">
+        VISIT US AT THE CORNER.
+      </h2>
+<p class="font-body-lg text-body-lg text-surface-dim max-w-2xl mt-xs">
+        Plot 42, Gumanpura Main Market, Near Shopping Center Circle, Kota, Rajasthan
+      </p>
+</div>
+<!-- 2-Column Space Ambiance + Interactive Table Reservation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+<!-- Left: Salon Card & Timetable (6 cols) -->
+<div class="lg:col-span-6 bg-surface/10 backdrop-blur-md rounded-xl p-lg border border-surface/10 flex flex-col justify-between shadow-2xl">
+<div class="flex flex-col gap-md">
+<div class="rounded-lg overflow-hidden relative">
+<img alt="Warm minimalist bakery interior with terrazzo floors, textured lime-wash walls, wicker woven pendant lights, and guests reading quietly" class="w-full h-[280px] object-cover rounded-lg filter contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaB6M6vpT5xwjZe1dwfhPJPdne1WnW1ooZkaFRh480nyvzyyR1TRx2pzjHFVda9-Mlp8Om6iAyTVZtnDju4PnELEwPQTWjUCIlW7ha_OVeKIoQPb6KOlWkEENZ9-Cj2yQMm0Fi2JoWATqAN3IQZS0PtaefGZ8xuJGd1T84-gG--vwYu-WNoKbZ04eWpuIJuntVObkiGN4ea24q3TcWJC_OJNnc7T9x6zEik3es-hDWn7AprZS0dqeM"/>
+<div class="absolute bottom-3 left-3 bg-on-background/90 px-sm py-xs rounded text-surface font-caption text-caption flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[16px]">chair</span>
+<span>28 Seats • Terrazzo Reading Salon</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs pt-xs">
+<div class="flex justify-between items-center text-caption font-caption text-surface-dim border-b border-surface/10 pb-2xs">
+<span>Morning Fire &amp; Viennoiserie:</span>
+<span class="text-surface font-semibold">07:30 – 14:00 Daily</span>
+</div>
+<div class="flex justify-between items-center text-caption font-caption text-surface-dim border-b border-surface/10 pb-2xs">
+<span>Dusk Salon &amp; Desserts:</span>
+<span class="text-surface font-semibold">16:00 – 22:30 Daily</span>
+</div>
+<div class="flex justify-between items-center text-caption font-caption text-surface-dim">
+<span>Quiet Laptop Hours:</span>
+<span class="text-tertiary-fixed font-semibold">Before 11:00 AM</span>
+</div>
+</div>
+</div>
+<div class="mt-lg pt-sm border-t border-surface/10 flex items-center justify-between">
+<span class="px-xs py-1 rounded bg-primary/20 text-primary font-label-caps text-label-caps font-bold">8 SEATS OPEN • WALK-INS WELCOME</span>
+<a class="font-caption text-caption text-primary hover:underline inline-flex items-center gap-1 font-semibold" href="https://maps.google.com" target="_blank">
+<span>Google Maps</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Right: Interactive Reservation Form (6 cols) -->
+<div class="lg:col-span-6 bg-surface/10 backdrop-blur-md rounded-xl p-lg border border-surface/10 flex flex-col justify-between shadow-2xl">
+<form class="flex flex-col gap-md" onsubmit="handleBookingSubmit(event, this)">
+<div class="flex items-center justify-between pb-xs border-b border-surface/10">
+<div class="flex items-center gap-2.5">
+<div class="h-8 w-8 rounded-lg bg-surface/10 p-1 flex items-center justify-center border border-surface/20">
+<img alt="Hot Corner Logo" class="h-full w-auto object-contain" src="logo.png"/>
+</div>
+<h3 class="font-title-lg text-title-lg text-surface-bright font-bold">Reserve Table or Morning Bake</h3>
+</div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Direct Dispatch</span>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-surface-dim">Guest Name</label>
+<input class="w-full px-md py-xs rounded bg-surface/90 text-on-surface placeholder:text-outline text-title-sm outline-none focus:ring-2 ring-primary" placeholder="e.g. Kabir Rathore" required="" type="text"/>
+</div>
+<div class="flex flex-col sm:flex-row gap-md">
+<div class="flex-1 flex flex-col gap-xs">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-surface-dim">Phone or Email</label>
+<input class="w-full px-md py-xs rounded bg-surface/90 text-on-surface placeholder:text-outline text-title-sm outline-none focus:ring-2 ring-primary" placeholder="+91 98... or email" required="" type="text"/>
+</div>
+<div class="w-full sm:w-1/3 flex flex-col gap-xs">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-surface-dim">Guests</label>
+<select class="w-full px-md py-xs rounded bg-surface/90 text-on-surface text-title-sm outline-none focus:ring-2 ring-primary">
+<option>1–2 Guests</option>
+<option>3–4 Guests</option>
+<option>5+ Guests (Communal Table)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-md">
+<div class="flex-1 flex flex-col gap-xs">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-surface-dim">Preferred Service Time</label>
+<select class="w-full px-md py-xs rounded bg-surface/90 text-on-surface text-title-sm outline-none focus:ring-2 ring-primary">
+<option>07:30 AM — First Morning Bake &amp; Coffee</option>
+<option>11:00 AM — Sourdough Loaf Release &amp; Tartines</option>
+<option>16:30 PM — Afternoon Tea &amp; Gateaux</option>
+<option>20:00 PM — Dusk Desserts &amp; Kyoto Cold</option>
+</select>
+</div>
+<div class="w-full sm:w-1/3 flex flex-col gap-xs">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-surface-dim">Date</label>
+<select class="w-full px-md py-xs rounded bg-surface/90 text-on-surface text-title-sm outline-none focus:ring-2 ring-primary">
+<option>Today</option>
+<option>Tomorrow Morning</option>
+<option>This Weekend</option>
+</select>
+</div>
+</div>
+<button class="mt-xs w-full py-sm px-lg rounded bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-all text-center shadow-lg font-bold" type="submit">
+              Confirm Table &amp; Morning Bake Reservation
+            </button>
+<p class="text-center font-caption text-[11px] text-surface-dim">
+              Instant SMS / WhatsApp confirmation with loaf reservation code.
+            </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. MASTER FOOTER: THE EVENING HEARTH CLOSING CHRONICLE & BROADSHEET ATELIER -->
+<footer class="relative w-full bg-surface-container-low border-t border-on-surface/15 overflow-hidden" id="broadsheet-footer">
+  <!-- Subtle Giant Broadsheet Watermark Letters in Background -->
+  <div class="pointer-events-none absolute inset-x-0 -bottom-10 select-none overflow-hidden flex justify-center opacity-[0.035] leading-none">
+    <span class="font-fraunces font-extrabold text-[160px] sm:text-[240px] lg:text-[340px] tracking-tighter text-on-surface uppercase whitespace-nowrap">HOT CORNER</span>
+  </div>
+
+  <div class="relative z-10 w-full px-margin-mobile lg:px-margin-desktop pt-16 lg:pt-24 pb-12">
+    
+    <!-- TOP MASTHEAD STRIP: Editorial Broadsheet Farewell & Edition Header -->
+    <div class="pb-10 lg:pb-14 border-b border-on-surface/15 flex flex-col gap-6">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="relative flex items-center justify-center h-12 w-12 rounded-xl bg-surface p-1.5 border border-on-surface/10 shadow-sm">
+            <img alt="Hot Corner Logo" class="h-full w-auto object-contain" src="logo.png"/>
+            <span class="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+            </span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-serif font-extrabold text-xl sm:text-2xl tracking-tight text-on-surface leading-none">HOT CORNER</span>
+              <span class="font-label-caps text-[9px] uppercase tracking-widest px-2 py-0.5 rounded bg-surface border border-on-surface/10 text-primary font-bold">1924 DECK</span>
+            </div>
+            <p class="font-caption text-xs text-on-surface-variant tracking-wider uppercase mt-1">Bakery, Patisserie &amp; Reading Salon · Gumanpura, Kota</p>
+          </div>
+        </div>
+
+        <!-- Micro Registry Registration Strip -->
+        <div class="flex items-center gap-3 text-caption font-label-caps uppercase text-on-surface-variant">
+          <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface/80 border border-on-surface/10">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            <span>GAZETTE REGISTRY NO. 884-D</span>
+          </div>
+          <!-- Ascend to Top Button -->
+          <button id="footer-scroll-top" type="button" class="group flex items-center gap-2 px-4 py-2 rounded-full bg-surface hover:bg-primary hover:text-white text-on-surface border border-on-surface/15 transition-all duration-300 shadow-sm hover:scale-[1.03] active:scale-[0.97]" aria-label="Scroll back to top">
+            <span class="font-label-caps text-xs uppercase tracking-wider font-bold">Ascend to Top</span>
+            <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:-translate-y-0.5">arrow_upward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Grand Farewell Statement -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end pt-2">
+        <div class="lg:col-span-8">
+          <h2 class="font-fraunces text-[38px] sm:text-[54px] lg:text-[68px] xl:text-[76px] leading-[0.94] tracking-tight text-on-surface font-semibold">
+            Until the next <span class="italic font-normal text-primary">twilight hearth pull.</span>
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-3 leading-relaxed">
+            Where Rajasthan’s sun-ripened durum wheat meets 72 hours of wild lactic fermentation, cedarwood fire, and single-origin coffee craft in the heart of Gumanpura.
+          </p>
+        </div>
+        
+        <!-- Live Baker's Night Diagnostic Strip -->
+        <div class="lg:col-span-4 flex flex-col gap-2 p-4 rounded-xl bg-surface/90 backdrop-blur-md border border-on-surface/10 shadow-sm">
+          <div class="flex items-center justify-between pb-2 border-b border-on-surface/10">
+            <div class="flex items-center gap-1.5">
+              <span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span class="font-label-caps text-[10px] uppercase tracking-widest text-primary font-bold">Live Atelier Status</span>
+            </div>
+            <span id="footer-live-clock" class="font-mono text-xs text-on-surface font-semibold">06:30:00 IST</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-caption pt-1">
+            <div>
+              <span class="font-label-caps text-[9px] uppercase tracking-wider text-outline block">Stone Hearth</span>
+              <span class="font-title-sm text-xs font-bold text-on-surface">245°C Resting Deck</span>
+            </div>
+            <div>
+              <span class="font-label-caps text-[9px] uppercase tracking-wider text-outline block">Dawn Pull</span>
+              <span class="font-title-sm text-xs font-bold text-primary">04:30 AM First Loaf</span>
+            </div>
+            <div>
+              <span class="font-label-caps text-[9px] uppercase tracking-wider text-outline block">Ferment Mother</span>
+              <span class="font-title-sm text-xs font-bold text-on-surface">‘Rukmini’ (Yr 4)</span>
+            </div>
+            <div>
+              <span class="font-label-caps text-[9px] uppercase tracking-wider text-outline block">Salon Tables</span>
+              <span class="font-title-sm text-xs font-bold text-tertiary">8 Seats Open</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE DISPATCH GAZETTE SUBSCRIPTION SLIP -->
+    <div class="my-10 lg:my-14 p-6 sm:p-8 rounded-2xl bg-surface border-2 border-dashed border-primary/30 shadow-sm relative overflow-hidden">
+      <!-- Watermark Stamp -->
+      <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 opacity-10 hidden sm:block">
+        <img alt="Hot Corner Crest" class="w-36 h-36 object-contain" src="logo.png"/>
+      </div>
+      
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded bg-primary text-white font-label-caps text-[9px] uppercase tracking-wider font-bold">Morning Gazette</span>
+            <span class="font-label-caps text-xs uppercase tracking-wider text-on-surface-variant font-semibold">05:00 AM Fresh Batch Dispatches</span>
+          </div>
+          <h3 class="font-fraunces text-2xl sm:text-3xl text-on-surface font-semibold">
+            Subscribe to the <span class="italic font-normal text-primary">Daily Hearth Dispatch.</span>
+          </h3>
+          <p class="font-body-md text-sm text-on-surface-variant max-w-xl">
+            Receive morning bake availability, limited weekend kouign-amann allocations, and seasonal café tasting invitations directly via WhatsApp or Email before the salon doors open.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <form id="dispatch-subscribe-form" onsubmit="handleDispatchSubscribe(event, this)" class="flex flex-col sm:flex-row gap-2">
+            <input type="text" id="dispatch-input" required placeholder="WhatsApp Number or Email..." class="flex-1 px-4 py-3 rounded-xl bg-surface-container-low border border-on-surface/15 text-on-surface placeholder:text-outline text-sm outline-none focus:border-primary focus:ring-2 ring-primary/20 transition-all"/>
+            <button type="submit" id="dispatch-submit-btn" class="px-6 py-3 rounded-xl bg-primary hover:bg-primary-container text-white font-title-sm text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] shrink-0">
+              Join Dispatch
+            </button>
+          </form>
+          <div class="flex items-center justify-between gap-2 mt-2 font-caption text-[11px] text-on-surface-variant">
+            <span>✦ No marketing spam. Only early dawn bake releases.</span>
+            <button type="button" onclick="copyBakeryCoords()" id="coords-btn" class="hover:text-primary transition-colors flex items-center gap-1 font-mono text-[10px]">
+              <span class="material-symbols-outlined text-[12px]">content_copy</span>
+              <span id="coords-text">25°10′N 75°50′E</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN 4-COLUMN BROADSHEET DIRECTORY & ARCHIVE -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-gutter pb-12 border-b border-on-surface/15">
+      
+      <!-- Col 1: Maison & Provenance (4 cols) -->
+      <div class="lg:col-span-4 flex flex-col gap-4">
+        <span class="font-label-caps text-xs uppercase tracking-widest text-primary font-bold">I. Maison &amp; Registry</span>
+        <div class="p-4 rounded-xl bg-surface border border-on-surface/10 flex flex-col gap-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-title-sm text-sm font-bold text-on-surface">The Hearthstone Deck</span>
+            <span class="font-label-caps text-[9px] uppercase px-2 py-0.5 rounded bg-surface-container text-primary font-bold">1924 DECK</span>
+          </div>
+          <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+            Plot 42, Main Market Road, Gumanpura<br/>
+            Kota, Rajasthan 324007, India<br/>
+            Direct Ovenline: <a href="tel:+917442420199" class="text-on-surface font-semibold hover:text-primary transition-colors">+91 (0744) 242-0199</a><br/>
+            Broadsheet Bureau: <a href="mailto:hello@hotcornerbakers.in" class="text-on-surface font-semibold hover:text-primary transition-colors">hello@hotcornerbakers.in</a>
+          </p>
+          <div class="pt-2 border-t border-on-surface/10 flex items-center justify-between text-caption font-caption">
+            <span class="text-on-surface-variant">Hours: 07:00 AM – 10:30 PM Daily</span>
+            <span class="text-primary font-semibold">Tuesdays All-Day</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2: The Bakery & Viennoiserie (2.5 cols) -->
+      <div class="lg:col-span-2 sm:col-span-1 flex flex-col gap-3">
+        <span class="font-label-caps text-xs uppercase tracking-widest text-primary font-bold">II. The Bakery</span>
+        <div class="flex flex-col gap-2 text-sm font-body-md text-on-surface-variant">
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#best-sellers">07:00 Sourdough Pull</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#best-sellers">72-Layer Flaky Patties</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#best-sellers">Brioche Feuilletée</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#about">Flour Pedigree (Sehore)</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#about">Mother Starter ‘Rukmini’</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#menu">Custom Cake Commissions</a>
+        </div>
+      </div>
+
+      <!-- Col 3: The Café & Kitchen (2.5 cols) -->
+      <div class="lg:col-span-2 sm:col-span-1 flex flex-col gap-3">
+        <span class="font-label-caps text-xs uppercase tracking-widest text-primary font-bold">III. The Café</span>
+        <div class="flex flex-col gap-2 text-sm font-body-md text-on-surface-variant">
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#menu">Bronze-Die Truffle Penne</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#menu">Brioche Smash Burgers</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#menu">Kyoto Cold Towers</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#menu">Single-Origin Roastery</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#visit-us">Salon Reading Seats</a>
+          <a class="hover:text-primary transition-colors hover:translate-x-1 duration-200 inline-block" href="#reviews">Guest Chronicle (4.95 ★)</a>
+        </div>
+      </div>
+
+      <!-- Col 4: Social Atelier & Direct Concierge (3.5 cols) -->
+      <div class="lg:col-span-4 flex flex-col gap-3">
+        <span class="font-label-caps text-xs uppercase tracking-widest text-primary font-bold">IV. Social Atelier &amp; Dispatches</span>
+        <p class="font-body-md text-xs text-on-surface-variant">
+          Connect with Kota's hearthstone community. Live bakery reels, table reservations, and acoustic salon soundscape.
+        </p>
+
+        <!-- Tactile Branded Stamp Grid -->
+        <div class="grid grid-cols-3 gap-2.5 pt-1">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Hot Corner on Instagram" class="group flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface border border-on-surface/10 hover:border-primary text-on-surface hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 text-center">
+            <svg class="w-5 h-5 mb-1 text-on-surface-variant group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span class="font-label-caps text-[9px] uppercase tracking-wider font-bold">Instagram</span>
+            <span class="font-caption text-[8px] opacity-75">14.2k Club</span>
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/917442420199" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Concierge" class="group flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface border border-on-surface/10 hover:border-primary text-on-surface hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 text-center">
+            <svg class="w-5 h-5 mb-1 text-on-surface-variant group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span class="font-label-caps text-[9px] uppercase tracking-wider font-bold">WhatsApp</span>
+            <span class="font-caption text-[8px] opacity-75">Concierge</span>
+          </a>
+          <!-- Google Maps -->
+          <a href="https://maps.google.com/?q=Hot+Corner+Bakery+Gumanpura+Kota" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="group flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface border border-on-surface/10 hover:border-primary text-on-surface hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 text-center">
+            <svg class="w-5 h-5 mb-1 text-on-surface-variant group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-4.198 0-8 3.402-8 7.602 0 4.884 7.033 15.461 7.334 15.914.167.249.445.397.742.397.298 0 .576-.148.743-.397.301-.453 7.181-11.03 7.181-15.914 0-4.2-3.802-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+            <span class="font-label-caps text-[9px] uppercase tracking-wider font-bold">Directions</span>
+            <span class="font-caption text-[8px] opacity-75">Gumanpura</span>
+          </a>
+          <!-- Spotify -->
+          <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" aria-label="Spotify Soundscape" class="group flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface border border-on-surface/10 hover:border-primary text-on-surface hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 text-center">
+            <svg class="w-5 h-5 mb-1 text-on-surface-variant group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            <span class="font-label-caps text-[9px] uppercase tracking-wider font-bold">Soundscape</span>
+            <span class="font-caption text-[8px] opacity-75">Café Audio</span>
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel" class="group flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface border border-on-surface/10 hover:border-primary text-on-surface hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 text-center">
+            <svg class="w-5 h-5 mb-1 text-on-surface-variant group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span class="font-label-caps text-[9px] uppercase tracking-wider font-bold">YouTube</span>
+            <span class="font-caption text-[8px] opacity-75">Bake Craft</span>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook Page" class="group flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface border border-on-surface/10 hover:border-primary text-on-surface hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:scale-105 active:scale-95 text-center">
+            <svg class="w-5 h-5 mb-1 text-on-surface-variant group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            <span class="font-label-caps text-[9px] uppercase tracking-wider font-bold">Facebook</span>
+            <span class="font-caption text-[8px] opacity-75">Community</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM COLOPHON, ACCREDITATIONS & RIGOR STRIP -->
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-on-surface-variant text-caption font-caption">
+      <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+        <p>© 2024 Hot Corner Bakery &amp; Café Kota · All Rights Reserved.</p>
+        <span class="hidden sm:inline text-outline-variant">•</span>
+        <p class="text-xs text-on-surface-variant/80">Composed in Playfair Display, Fraunces &amp; Cormorant Garamond.</p>
+      </div>
+
+      <div class="flex items-center gap-4 font-label-caps text-[10px] uppercase tracking-wider flex-wrap justify-center">
+        <a class="hover:text-primary transition-colors" href="#visit-us">Dispatch Protocol</a>
+        <span class="text-outline-variant">•</span>
+        <a class="hover:text-primary transition-colors" href="#about">Heritage Durum Ledger</a>
+        <span class="text-outline-variant">•</span>
+        <a class="hover:text-primary transition-colors" href="#visit-us">Hygiene Audit Grade A+</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</div><!-- end #content-curtain -->
+</div><!-- end flex-col -->
+</main>
+<script>
+  function handleReserveClick(button) {
+    button.textContent = "✓ Reserved for Tomorrow";
+    button.classList.remove('bg-primary', 'bg-surface-container');
+    button.classList.add('bg-tertiary', 'text-on-tertiary');
+    setTimeout(() => {
+      button.textContent = "Reserve Batch";
+      button.classList.remove('bg-tertiary', 'text-on-tertiary');
+      button.classList.add('bg-surface-container', 'text-on-surface');
+    }, 3500);
+  }
+
+  function handleBookingSubmit(event, form) {
+    event.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = "✓ Table & Fresh Bake Confirmed!";
+    btn.classList.remove('bg-primary');
+    btn.classList.add('bg-tertiary');
+    setTimeout(() => {
+      btn.textContent = "Confirm Table & Morning Bake Reservation";
+      btn.classList.remove('bg-tertiary');
+      btn.classList.add('bg-primary');
+      form.reset();
+    }, 4500);
+  }
+
+  function handleDispatchSubscribe(event, form) {
+    event.preventDefault();
+    const input = form.querySelector('input');
+    const btn = form.querySelector('button[type="submit"]');
+    const origText = btn.textContent;
+    btn.textContent = "✓ Added to 05:00 AM Dispatch!";
+    btn.classList.remove('bg-primary');
+    btn.classList.add('bg-tertiary');
+    input.value = "";
+    input.placeholder = "✓ Registered for Dawn Pull!";
+    setTimeout(() => {
+      btn.textContent = origText;
+      btn.classList.remove('bg-tertiary');
+      btn.classList.add('bg-primary');
+      input.placeholder = "WhatsApp Number or Email...";
+    }, 4000);
+  }
+
+  function copyBakeryCoords() {
+    const coords = "25°10′N 75°50′E (Gumanpura, Kota)";
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(coords).catch(() => {});
+    }
+    const coordsText = document.getElementById('coords-text');
+    if (coordsText) {
+      const orig = coordsText.textContent;
+      coordsText.textContent = "✓ Copied!";
+      coordsText.classList.add('text-primary', 'font-bold');
+      setTimeout(() => {
+        coordsText.textContent = orig;
+        coordsText.classList.remove('text-primary', 'font-bold');
+      }, 2000);
+    }
+  }
+
+  function filterMenu(category, button) {
+    const tabs = document.querySelectorAll('.menu-tab-btn');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-sm');
+      tab.classList.add('bg-surface-container', 'text-on-surface');
+    });
+    button.classList.remove('bg-surface-container', 'text-on-surface');
+    button.classList.add('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-sm');
+
+    const groups = document.querySelectorAll('.menu-category-group');
+    groups.forEach(group => {
+      if (category === 'all' || group.getAttribute('data-category') === category) {
+        group.style.display = 'flex';
+      } else {
+        group.style.display = 'none';
+      }
+    });
+  }
+
+  function activatePastry(index) {
+    const names = [
+      "Smoked Malai Paneer Tikka Patty",
+      "Wild Truffle & Forest Mushroom Penne",
+      "Truffle Melt Double Brioche Burger",
+      "Cardamom Saffron Brioche Feuilletée"
+    ];
+    console.log("Inspecting specification for:", names[index]);
+  }
+
+  // --- SMOOTH SCROLL WITH LENIS ---
+  let lenis = null;
+  if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({
+      duration: 1.25,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.6,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+  // --- HERO CENTER MULTI-IMAGE CYCLING SLIDER ---
+  const heroSlideImages = document.querySelectorAll('.hero-slide-img');
+  const heroSlideDots = document.querySelectorAll('.hero-slide-dot');
+  const heroBadgeText = document.getElementById('hero-image-badge-text');
+  const heroArtifactContainer = document.getElementById('hero-artifact-container');
+  let heroCurrentSlide = 0;
+  let heroSlideTimer = null;
+
+  function switchHeroSlide(targetIndex) {
+    if (!heroSlideImages.length) return;
+    const currentImg = heroSlideImages[heroCurrentSlide];
+    const nextIndex = targetIndex !== undefined ? targetIndex : (heroCurrentSlide + 1) % heroSlideImages.length;
+    const nextImg = heroSlideImages[nextIndex];
+
+    // Transition out current slide
+    currentImg.classList.remove('slide-active');
+    currentImg.classList.add('slide-inactive');
+
+    // Transition in next slide
+    nextImg.classList.remove('slide-inactive');
+    nextImg.classList.add('slide-active');
+
+    // Update progress pill dots
+    heroSlideDots.forEach((dot, idx) => {
+      if (idx === nextIndex) {
+        dot.classList.remove('w-1', 'bg-surface/50');
+        dot.classList.add('w-3.5', 'bg-primary');
+      } else {
+        dot.classList.remove('w-3.5', 'bg-primary');
+        dot.classList.add('w-1', 'bg-surface/50');
+      }
+    });
+
+    // Update stamped badge text
+    if (heroBadgeText) {
+      heroBadgeText.style.opacity = '0';
+      setTimeout(() => {
+        heroBadgeText.textContent = nextImg.getAttribute('data-badge') || '';
+        heroBadgeText.style.opacity = '1';
+      }, 180);
+    }
+
+    heroCurrentSlide = nextIndex;
+  }
+
+  window.switchHeroSlide = switchHeroSlide;
+  window.startHeroSlider = startHeroSlider;
+  window.stopHeroSlider = stopHeroSlider;
+
+  function startHeroSlider() {
+    stopHeroSlider();
+    heroSlideTimer = setInterval(() => {
+      switchHeroSlide();
+    }, 2400);
+  }
+
+  function stopHeroSlider() {
+    if (heroSlideTimer) {
+      clearInterval(heroSlideTimer);
+      heroSlideTimer = null;
+    }
+  }
+
+  if (heroArtifactContainer) {
+    heroArtifactContainer.addEventListener('mouseenter', stopHeroSlider);
+    heroArtifactContainer.addEventListener('mouseleave', startHeroSlider);
+  }
+
+  startHeroSlider();
+
+  // --- HERO PARALLAX & CURTAIN DEPTH EFFECT ---
+  const heroDimmer = document.getElementById('hero-dimmer');
+  const heroContent = document.getElementById('hero-content');
+  const heroSection = document.getElementById('hero');
+
+  function updateHeroParallax(scrollY) {
+    const y = typeof scrollY === 'number' ? scrollY : window.scrollY;
+    const vh = window.innerHeight;
+    const progress = Math.min(1, Math.max(0, y / vh));
+
+    if (heroDimmer) {
+      heroDimmer.style.opacity = (progress * 0.35).toFixed(3);
+    }
+    if (heroContent) {
+      const scale = (1 - progress * 0.05).toFixed(4);
+      const translateY = (progress * 32).toFixed(1);
+      heroContent.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+    }
+    if (heroSection) {
+      if (y > vh * 1.5) {
+        heroSection.style.visibility = 'hidden';
+      } else {
+        heroSection.style.visibility = 'visible';
+      }
+    }
+  }
+
+  // --- HEADER DYNAMICS & SLIDING PILL ANIMATIONS ---
+  const mainHeader = document.getElementById('main-header');
+  const navContainer = document.getElementById('nav-container');
+  const navActivePill = document.getElementById('nav-active-pill');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const burger1 = document.getElementById('burger-line-1');
+  const burger2 = document.getElementById('burger-line-2');
+  const burger3 = document.getElementById('burger-line-3');
+
+  let currentActiveSection = null;
+  let isMobileMenuOpen = false;
+
+  // 1. Transparent at 0 scroll -> frosted glass background when scrolled
+  function updateHeaderBackground() {
+    if (!mainHeader) return;
+    const isScrolled = window.scrollY > 15;
+    if (isScrolled) {
+      mainHeader.classList.remove('bg-transparent', 'border-transparent', 'shadow-none', 'py-4', 'lg:py-5');
+      mainHeader.classList.add('bg-surface/90', 'backdrop-blur-xl', 'border-on-surface/10', 'shadow-[0_4px_24px_rgba(28,28,24,0.05)]', 'py-2.5', 'lg:py-3');
+    } else {
+      mainHeader.classList.remove('bg-surface/90', 'backdrop-blur-xl', 'border-on-surface/10', 'shadow-[0_4px_24px_rgba(28,28,24,0.05)]', 'py-2.5', 'lg:py-3');
+      mainHeader.classList.add('bg-transparent', 'border-transparent', 'shadow-none', 'py-4', 'lg:py-5');
+    }
+  }
+
+  // 2. Active Section Pill Positioner with Fluid Sliding Animation
+  function positionNavPill(targetLink) {
+    if (!navActivePill || !navContainer) return;
+
+    if (!targetLink) {
+      navActivePill.style.opacity = '0';
+      navLinks.forEach(l => {
+        l.classList.remove('active-nav-link', '!text-white', 'text-white', 'font-semibold');
+        l.classList.add('text-on-surface-variant');
+        const dot = l.querySelector('.nav-dot');
+        if (dot) dot.classList.add('opacity-0');
+      });
+      return;
+    }
+
+    const containerRect = navContainer.getBoundingClientRect();
+    const linkRect = targetLink.getBoundingClientRect();
+    const leftOffset = linkRect.left - containerRect.left;
+    const width = linkRect.width;
+
+    navActivePill.style.left = `${leftOffset}px`;
+    navActivePill.style.width = `${width}px`;
+    navActivePill.style.opacity = '1';
+
+    navLinks.forEach(l => {
+      const dot = l.querySelector('.nav-dot');
+      if (l === targetLink) {
+        l.classList.add('active-nav-link', '!text-white', 'text-white', 'font-semibold');
+        l.classList.remove('text-on-surface-variant');
+        if (dot) dot.classList.remove('opacity-0');
+      } else {
+        l.classList.remove('active-nav-link', '!text-white', 'text-white', 'font-semibold');
+        l.classList.add('text-on-surface-variant');
+        if (dot) dot.classList.add('opacity-0');
+      }
+    });
+  }
+
+  // 3. Scroll Spy for Active Section Detection
+  const trackedSections = [
+    { id: 'best-sellers' },
+    { id: 'about' },
+    { id: 'menu' },
+    { id: 'reviews' },
+    { id: 'visit-us' }
+  ];
+
+  function evaluateActiveSection() {
+    if (window.scrollY < 180) {
+      if (currentActiveSection !== null) {
+        currentActiveSection = null;
+        positionNavPill(null);
+        updateMobileActiveSection(null);
+      }
+      return;
+    }
+
+    const scrollPos = window.scrollY + 140;
+    let matchedId = null;
+
+    for (let i = trackedSections.length - 1; i >= 0; i--) {
+      const el = document.getElementById(trackedSections[i].id);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (scrollPos >= top) {
+          matchedId = trackedSections[i].id;
+          break;
+        }
+      }
+    }
+
+    if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60)) {
+      matchedId = 'visit-us';
+    }
+
+    if (matchedId !== currentActiveSection) {
+      currentActiveSection = matchedId;
+      const matchingLink = matchedId ? document.querySelector(`.nav-link[data-section="${matchedId}"]`) : null;
+      positionNavPill(matchingLink);
+      updateMobileActiveSection(matchedId);
+    }
+  }
+
+  function updateMobileActiveSection(sectionId) {
+    mobileNavLinks.forEach(link => {
+      const dot = link.querySelector('.mobile-dot');
+      const linkSection = link.getAttribute('data-section');
+      if (sectionId && linkSection === sectionId) {
+        link.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold');
+        if (dot) dot.classList.remove('opacity-0');
+      } else {
+        link.classList.remove('bg-surface-container-high', 'text-primary', 'font-semibold');
+        if (dot) dot.classList.add('opacity-0');
+      }
+    });
+  }
+
+  // Nav link hover preview
+  navLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      positionNavPill(link);
+    });
+  });
+
+  if (navContainer) {
+    navContainer.addEventListener('mouseleave', () => {
+      const activeLink = currentActiveSection ? document.querySelector(`.nav-link[data-section="${currentActiveSection}"]`) : null;
+      positionNavPill(activeLink);
+    });
+  }
+
+  // 4. Smooth Anchor Scrolling with Lenis
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href').substring(1);
+      if (!targetId) return;
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        closeMobileMenu();
+
+        if (targetId === 'hero') {
+          if (lenis) {
+            lenis.scrollTo(0, { duration: 1.4 });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        } else {
+          if (lenis) {
+            lenis.scrollTo(targetEl, { offset: -70, duration: 1.4 });
+          } else {
+            const headerOffset = 70;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+          }
+        }
+      }
+    });
+  });
+
+  // 5. Mobile Menu Toggle & State
+  function toggleMobileMenu() {
+    isMobileMenuOpen = !isMobileMenuOpen;
+    if (isMobileMenuOpen) {
+      mobileDrawer.classList.remove('-translate-y-[120%]', 'opacity-0', 'pointer-events-none');
+      mobileDrawer.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+      if (burger1 && burger2 && burger3) {
+        burger1.classList.add('rotate-45', 'translate-y-1.5');
+        burger1.classList.remove('-translate-y-1');
+        burger2.classList.add('opacity-0');
+        burger3.classList.add('-rotate-45', '-translate-y-1.5');
+        burger3.classList.remove('translate-y-1');
+      }
+    } else {
+      closeMobileMenu();
+    }
+  }
+
+  function closeMobileMenu() {
+    if (!isMobileMenuOpen && !mobileDrawer) return;
+    isMobileMenuOpen = false;
+    if (mobileDrawer) {
+      mobileDrawer.classList.add('-translate-y-[120%]', 'opacity-0', 'pointer-events-none');
+      mobileDrawer.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    }
+    if (burger1 && burger2 && burger3) {
+      burger1.classList.remove('rotate-45', 'translate-y-1.5');
+      burger1.classList.add('-translate-y-1');
+      burger2.classList.remove('opacity-0');
+      burger3.classList.remove('-rotate-45', '-translate-y-1.5');
+      burger3.classList.add('translate-y-1');
+    }
+  }
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+  }
+
+  // 6. Live IST Clock
+  function updateLiveClock() {
+    const clock = document.getElementById('live-ist-clock');
+    const footerClock = document.getElementById('footer-live-clock');
+    const now = new Date();
+    const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+    const formatted = `${new Intl.DateTimeFormat('en-GB', options).format(now)} IST`;
+    if (clock) clock.textContent = formatted;
+    if (footerClock) footerClock.textContent = formatted;
+  }
+  setInterval(updateLiveClock, 1000);
+  updateLiveClock();
+
+  // Footer Ascend to Top
+  const footerScrollTopBtn = document.getElementById('footer-scroll-top');
+  if (footerScrollTopBtn) {
+    footerScrollTopBtn.addEventListener('click', () => {
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 1.4 });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
+  // 7. Ambient Soundscape Simulation Toggle
+  let isSoundscapeActive = false;
+  const soundscapeBtn = document.getElementById('soundscape-toggle');
+  const soundscapeLabel = document.getElementById('soundscape-label');
+  const soundBars = document.querySelectorAll('.sound-bar');
+
+  if (soundscapeBtn) {
+    soundscapeBtn.addEventListener('click', () => {
+      isSoundscapeActive = !isSoundscapeActive;
+      if (isSoundscapeActive) {
+        soundscapeBtn.classList.remove('bg-surface-container/70', 'text-on-surface-variant');
+        soundscapeBtn.classList.add('bg-primary/10', 'text-primary', 'border-primary/20');
+        if (soundscapeLabel) soundscapeLabel.textContent = "Atmosphere On";
+        soundBars.forEach((bar, idx) => {
+          bar.classList.add('animate-pulse');
+          bar.style.animationDuration = `${0.4 + idx * 0.2}s`;
+        });
+      } else {
+        soundscapeBtn.classList.remove('bg-primary/10', 'text-primary', 'border-primary/20');
+        soundscapeBtn.classList.add('bg-surface-container/70', 'text-on-surface-variant');
+        if (soundscapeLabel) soundscapeLabel.textContent = "Soundscape";
+        soundBars.forEach(bar => {
+          bar.classList.remove('animate-pulse');
+        });
+      }
+    });
+  }
+
+  // 8. REVIEWS AUTO-SLIDING CAROUSEL (1-by-1 shift: 123 -> 234 -> 345 ...)
+  const reviewTrack = document.getElementById('reviews-track');
+  const reviewViewport = document.getElementById('reviews-carousel-viewport');
+  const reviewCounter = document.getElementById('review-counter');
+  const reviewPrevBtn = document.getElementById('review-prev-btn');
+  const reviewNextBtn = document.getElementById('review-next-btn');
+  const reviewDots = document.querySelectorAll('.review-dot');
+
+  const totalReviews = 6;
+  let reviewCurrentIndex = 0;
+  let reviewAutoPlayTimer = null;
+  let isReviewTransitioning = false;
+
+  function getItemsPerView() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  }
+
+  function updateReviewDots(activeIdx) {
+    const normIdx = activeIdx % totalReviews;
+    if (reviewCounter) {
+      reviewCounter.textContent = `0${normIdx + 1} / 0${totalReviews}`;
+    }
+    reviewDots.forEach((dot, idx) => {
+      if (idx === normIdx) {
+        dot.classList.remove('w-2', 'bg-on-surface/20');
+        dot.classList.add('w-6', 'bg-primary');
+      } else {
+        dot.classList.remove('w-6', 'bg-primary');
+        dot.classList.add('w-2', 'bg-on-surface/20');
+      }
+    });
+  }
+
+  function renderReviewSlide(animate = true) {
+    if (!reviewTrack) return;
+    const itemsPerView = getItemsPerView();
+    const slidePercent = 100 / itemsPerView;
+
+    if (animate) {
+      reviewTrack.style.transition = 'transform 0.65s cubic-bezier(0.25, 1, 0.5, 1)';
+    } else {
+      reviewTrack.style.transition = 'none';
+    }
+
+    reviewTrack.style.transform = `translateX(-${reviewCurrentIndex * slidePercent}%)`;
+    updateReviewDots(reviewCurrentIndex);
+  }
+
+  function nextReview() {
+    if (isReviewTransitioning || !reviewTrack) return;
+    isReviewTransitioning = true;
+    reviewCurrentIndex++;
+    renderReviewSlide(true);
+
+    if (reviewCurrentIndex >= totalReviews) {
+      setTimeout(() => {
+        if (!reviewTrack) return;
+        reviewTrack.style.transition = 'none';
+        reviewCurrentIndex = 0;
+        reviewTrack.style.transform = 'translateX(0%)';
+        isReviewTransitioning = false;
+      }, 650);
+    } else {
+      setTimeout(() => {
+        isReviewTransitioning = false;
+      }, 650);
+    }
+  }
+
+  function prevReview() {
+    if (isReviewTransitioning || !reviewTrack) return;
+    isReviewTransitioning = true;
+
+    if (reviewCurrentIndex === 0) {
+      reviewTrack.style.transition = 'none';
+      reviewCurrentIndex = totalReviews;
+      const itemsPerView = getItemsPerView();
+      const slidePercent = 100 / itemsPerView;
+      reviewTrack.style.transform = `translateX(-${reviewCurrentIndex * slidePercent}%)`;
+      void reviewTrack.offsetHeight;
+
+      requestAnimationFrame(() => {
+        reviewCurrentIndex = totalReviews - 1;
+        renderReviewSlide(true);
+        setTimeout(() => {
+          isReviewTransitioning = false;
+        }, 650);
+      });
+    } else {
+      reviewCurrentIndex--;
+      renderReviewSlide(true);
+      setTimeout(() => {
+        isReviewTransitioning = false;
+      }, 650);
+    }
+  }
+
+  function goToReviewSlide(index) {
+    if (isReviewTransitioning || !reviewTrack) return;
+    reviewCurrentIndex = index;
+    renderReviewSlide(true);
+    resetReviewAutoPlay();
+  }
+  window.goToReviewSlide = goToReviewSlide;
+
+  reviewDots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      goToReviewSlide(idx);
+    });
+  });
+
+  function startReviewAutoPlay() {
+    stopReviewAutoPlay();
+    reviewAutoPlayTimer = setInterval(() => {
+      nextReview();
+    }, 3800);
+  }
+
+  function stopReviewAutoPlay() {
+    if (reviewAutoPlayTimer) {
+      clearInterval(reviewAutoPlayTimer);
+      reviewAutoPlayTimer = null;
+    }
+  }
+
+  function resetReviewAutoPlay() {
+    stopReviewAutoPlay();
+    startReviewAutoPlay();
+  }
+
+  if (reviewNextBtn) {
+    reviewNextBtn.addEventListener('click', () => {
+      nextReview();
+      resetReviewAutoPlay();
+    });
+  }
+
+  if (reviewPrevBtn) {
+    reviewPrevBtn.addEventListener('click', () => {
+      prevReview();
+      resetReviewAutoPlay();
+    });
+  }
+
+  if (reviewViewport) {
+    reviewViewport.addEventListener('mouseenter', stopReviewAutoPlay);
+    reviewViewport.addEventListener('mouseleave', startReviewAutoPlay);
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+    reviewViewport.addEventListener('touchstart', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        touchStartX = e.changedTouches[0].screenX;
+      }
+      stopReviewAutoPlay();
+    }, { passive: true });
+
+    reviewViewport.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            nextReview();
+          } else {
+            prevReview();
+          }
+        }
+      }
+      startReviewAutoPlay();
+    }, { passive: true });
+  }
+
+  startReviewAutoPlay();
+
+  // Event listeners for Lenis and native scroll
+  function onScroll(y) {
+    updateHeaderBackground();
+    evaluateActiveSection();
+    updateHeroParallax(y);
+  }
+
+  if (lenis) {
+    lenis.on('scroll', (e) => {
+      onScroll(e.scroll);
+    });
+  } else {
+    window.addEventListener('scroll', () => {
+      onScroll(window.scrollY);
+    }, { passive: true });
+  }
+
+  window.addEventListener('resize', () => {
+    const activeLink = currentActiveSection ? document.querySelector(`.nav-link[data-section="${currentActiveSection}"]`) : null;
+    positionNavPill(activeLink);
+    updateHeroParallax(window.scrollY);
+    renderReviewSlide(false);
+  });
+
+  // Initial runs
+  updateHeaderBackground();
+  evaluateActiveSection();
+  updateHeroParallax(0);
+</script></body></html>
